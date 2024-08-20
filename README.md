@@ -2,10 +2,10 @@
 
 Se necesita desarrollar una aplicativo para una empresa
 llamada Gominola que se dedica a servicios relacionados
-con la renta de acompañantes. El propositoes facilitar la
-asignación de citas teniendo en cuenta siel acompañantes
+con la renta de acompañantes. El proposito es facilitar la
+asignación de citas teniendo en cuenta si el acompañante
 está disponible, la fecha y hora de la cita, el sitio del
-encuentro y el valor por hora del servicio segun demandeel
+encuentro y el valor por hora del servicio segun demande el
 el acompañante.
 
 ## Clases
