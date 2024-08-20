@@ -11,9 +11,9 @@
 
 <AnchorPane prefHeight="500.0" prefWidth="750.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="co.edu.uniquindio.gominola.view.AcompananteView">
    <children>
-      <SplitPane dividerPositions="0.5499161073825504" layoutY="23.0" orientation="VERTICAL" prefHeight="478.0" prefWidth="767.0">
+      <SplitPane dividerPositions="0.4564" orientation="VERTICAL" prefHeight="501.0" prefWidth="767.0">
         <items>
-          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="145.0" prefWidth="766.0">
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="282.0" prefWidth="766.0">
                <children>
                   <Label fx:id="lbNombre" layoutX="14.0" layoutY="14.0" text="Nombre:" />
                   <Label fx:id="lbTalla" layoutX="14.0" layoutY="55.0" text="Talla:" />
@@ -22,39 +22,37 @@
                   <Label fx:id="lbCorreo" layoutX="397.0" layoutY="55.0" text="Correo:" />
                   <Label fx:id="lbSaludo" layoutX="392.0" layoutY="99.0" text="Saludo:" />
                   <Label fx:id="lbValorHora" layoutX="14.0" layoutY="140.0" text="Valor hora:" />
-                  <TextField fx:id="txtNombre" layoutX="82.0" layoutY="10.0" />
-                  <TextField fx:id="txtTalla" layoutX="82.0" layoutY="51.0" />
-                  <TextField fx:id="txtTelefono" layoutX="82.0" layoutY="95.0" />
-                  <TextField fx:id="txtValorHora" layoutX="82.0" layoutY="136.0" />
-                  <TextField fx:id="txtEdad" layoutX="445.0" layoutY="10.0" />
-                  <TextField fx:id="txtCorreo" layoutX="445.0" layoutY="51.0" />
-                  <TextField fx:id="txtSaludo" layoutX="445.0" layoutY="95.0" />
+                  <TextField fx:id="txtNombreAcompañante" layoutX="82.0" layoutY="10.0" />
+                  <TextField fx:id="txtTallaAcompañante" layoutX="82.0" layoutY="51.0" />
+                  <TextField fx:id="txtTelefonoAcompañante" layoutX="82.0" layoutY="95.0" />
+                  <TextField fx:id="txtValorHoraAcompañante" layoutX="82.0" layoutY="136.0" />
+                  <TextField fx:id="txtEdadAcompañante" layoutX="445.0" layoutY="10.0" />
+                  <TextField fx:id="txtCorreoAcompañante" layoutX="445.0" layoutY="51.0" />
+                  <TextField fx:id="txtSaludoAcompañante" layoutX="445.0" layoutY="95.0" />
                   <Label layoutX="392.0" layoutY="140.0" text="Dispinibilidad:" />
-                  <RadioButton fx:id="rbDisponible" layoutX="476.0" layoutY="140.0" mnemonicParsing="false" text="Dispinible :)" />
-                  <RadioButton fx:id="rbOcupado" layoutX="580.0" layoutY="140.0" mnemonicParsing="false" text="Ocupado :(" />
-                  <Button fx:id="btnActualizar" layoutX="131.0" layoutY="184.0" mnemonicParsing="false" onAction="#actualizarAction" text="Actualizar" />
-                  <Button fx:id="btnAgregar" layoutX="332.0" layoutY="184.0" mnemonicParsing="false" onAction="#agregarAction" text="Agregar" />
-                  <Button fx:id="btnEliminar" layoutX="520.0" layoutY="184.0" mnemonicParsing="false" onAction="#eliminarAction" text="Eliminar" />
+                  <RadioButton fx:id="rbDisponibleAcompañante" layoutX="476.0" layoutY="140.0" mnemonicParsing="false" text="Dispinible :)" />
+                  <RadioButton fx:id="rbOcupadoAcompañante" layoutX="580.0" layoutY="140.0" mnemonicParsing="false" text="Ocupado :(" />
+                  <Button fx:id="btnAgregarAcompañante" layoutX="232.0" layoutY="184.0" mnemonicParsing="false" onAction="#agregarAction" text="Agregar/Actualizar" />
+                  <Button fx:id="btnEliminarAcompañante" layoutX="416.0" layoutY="184.0" mnemonicParsing="false" onAction="#eliminarAction" text="Eliminar" />
                </children>
             </AnchorPane>
           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="253.0" prefWidth="766.0">
                <children>
-                  <TableView layoutY="1.0" prefHeight="212.0" prefWidth="766.0">
+                  <TableView fx:id="tvTablaAcompañante" layoutY="1.0" prefHeight="269.0" prefWidth="766.0">
                     <columns>
-                      <TableColumn fx:id="tblNombre" prefWidth="95.0" text="Nombre" />
-                      <TableColumn fx:id="tblEdad" prefWidth="95.0" text="Edad" />
-                        <TableColumn fx:id="tblTalla" prefWidth="95.0" text="Talla" />
-                        <TableColumn fx:id="tblCorreo" prefWidth="95.0" text="Correo" />
-                        <TableColumn fx:id="tblTelefono" prefWidth="95.0" text="Telefono" />
-                        <TableColumn fx:id="tblSaludo" prefWidth="95.0" text="Saludo" />
-                        <TableColumn fx:id="tblValorHora" prefWidth="95.0" text="Valor Hora" />
-                        <TableColumn fx:id="tblDisponibilidad" prefWidth="100.0" text="Disponibilidad" />
+                      <TableColumn fx:id="tblNombreAcompañante" prefWidth="95.0" text="Nombre" />
+                      <TableColumn fx:id="tblEdadAcompañante" prefWidth="95.0" text="Edad" />
+                        <TableColumn fx:id="tblTallaAcompañante" prefWidth="95.0" text="Talla" />
+                        <TableColumn fx:id="tblCorreoAcompañante" prefWidth="95.0" text="Correo" />
+                        <TableColumn fx:id="tblTelefonoAcompañante" prefWidth="95.0" text="Telefono" />
+                        <TableColumn fx:id="tblSaludoAcompañante" prefWidth="95.0" text="Saludo" />
+                        <TableColumn fx:id="tblValorHoraAcompañante" prefWidth="95.0" text="Valor Hora" />
+                        <TableColumn fx:id="tblDisponibilidadAcompañante" prefWidth="100.0" text="Disponibilidad" />
                     </columns>
                   </TableView>
                </children>
             </AnchorPane>
         </items>
       </SplitPane>
-      <Label layoutX="649.0" layoutY="3.0" text="pestaña acompañante" />
    </children>
 </AnchorPane>

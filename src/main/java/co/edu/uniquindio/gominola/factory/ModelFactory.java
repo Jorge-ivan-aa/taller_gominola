@@ -6,7 +6,7 @@ public class ModelFactory {
     private static ModelFactory instance;
     private Gominola gominola;
 
-    public ModelFactory() {
+    private ModelFactory() {
         gominola = new Gominola();
     }
 

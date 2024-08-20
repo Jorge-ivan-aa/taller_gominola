@@ -8,6 +8,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.RadioButton;
 import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 
 public class AcompananteView {
@@ -19,13 +20,10 @@ public class AcompananteView {
     private URL location;
 
     @FXML
-    private Button btnActualizar;
+    private Button btnAgregarAcompañante;
 
     @FXML
-    private Button btnAgregar;
-
-    @FXML
-    private Button btnEliminar;
+    private Button btnEliminarAcompañante;
 
     @FXML
     private Label lbCorreo;
@@ -49,60 +47,58 @@ public class AcompananteView {
     private Label lbValorHora;
 
     @FXML
-    private RadioButton rbDisponible;
+    private RadioButton rbDisponibleAcompañante;
 
     @FXML
-    private RadioButton rbOcupado;
+    private RadioButton rbOcupadoAcompañante;
 
     @FXML
-    private TableColumn<?, ?> tblCorreo;
+    private TableColumn<?, ?> tblCorreoAcompañante;
 
     @FXML
-    private TableColumn<?, ?> tblDisponibilidad;
+    private TableColumn<?, ?> tblDisponibilidadAcompañante;
 
     @FXML
-    private TableColumn<?, ?> tblEdad;
+    private TableColumn<?, ?> tblEdadAcompañante;
 
     @FXML
-    private TableColumn<?, ?> tblNombre;
+    private TableColumn<?, ?> tblNombreAcompañante;
 
     @FXML
-    private TableColumn<?, ?> tblSaludo;
+    private TableColumn<?, ?> tblSaludoAcompañante;
 
     @FXML
-    private TableColumn<?, ?> tblTalla;
+    private TableColumn<?, ?> tblTallaAcompañante;
 
     @FXML
-    private TableColumn<?, ?> tblTelefono;
+    private TableColumn<?, ?> tblTelefonoAcompañante;
 
     @FXML
-    private TableColumn<?, ?> tblValorHora;
+    private TableColumn<?, ?> tblValorHoraAcompañante;
 
     @FXML
-    private TextField txtCorreo;
+    private TableView<?> tvTablaAcompañante;
 
     @FXML
-    private TextField txtEdad;
+    private TextField txtCorreoAcompañante;
 
     @FXML
-    private TextField txtNombre;
+    private TextField txtEdadAcompañante;
 
     @FXML
-    private TextField txtSaludo;
+    private TextField txtNombreAcompañante;
 
     @FXML
-    private TextField txtTalla;
+    private TextField txtSaludoAcompañante;
 
     @FXML
-    private TextField txtTelefono;
+    private TextField txtTallaAcompañante;
 
     @FXML
-    private TextField txtValorHora;
+    private TextField txtTelefonoAcompañante;
 
     @FXML
-    void actualizarAction(ActionEvent event) {
-
-    }
+    private TextField txtValorHoraAcompañante;
 
     @FXML
     void agregarAction(ActionEvent event) {
@@ -116,5 +112,8 @@ public class AcompananteView {
 
     @FXML
     void initialize() {
+
+
     }
+
 }
