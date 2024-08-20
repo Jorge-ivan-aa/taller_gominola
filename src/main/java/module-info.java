@@ -3,6 +3,6 @@ module co.edu.uniquindio.gominola {
     requires javafx.fxml;
 
 
-    opens co.edu.uniquindio.gominola to javafx.fxml;
+    opens co.edu.uniquindio.gominola.view to javafx.fxml;
     exports co.edu.uniquindio.gominola;
 }

@@ -1,6 +1,6 @@
 <component name="ProjectRunConfigurationManager">
   <configuration default="false" name="intento" type="Application" factoryName="Application">
-    <option name="MAIN_CLASS_NAME" value="co.edu.uniquindio.gominola.app" />
+    <option name="MAIN_CLASS_NAME" value="co.edu.uniquindio.gominola.App" />
     <module name="gominola" />
     <option name="VM_PARAMETERS" value="-Dprism.order=sw -Djavafx.platform=gtk" />
     <method v="2">
