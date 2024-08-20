@@ -10,6 +10,7 @@ import javafx.scene.control.RadioButton;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
+import javafx.scene.layout.GridPane;
 
 public class AcompananteView {
 
@@ -99,6 +100,8 @@ public class AcompananteView {
 
     @FXML
     private TextField txtValorHoraAcompañante;
+    @FXML
+    private GridPane gpDatosAcompañante;
 
     @FXML
     void agregarAction(ActionEvent event) {
@@ -112,7 +115,6 @@ public class AcompananteView {
 
     @FXML
     void initialize() {
-
 
     }
 
