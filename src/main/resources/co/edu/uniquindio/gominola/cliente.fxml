@@ -9,52 +9,57 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.RowConstraints?>
 
-<AnchorPane prefHeight="518.0" prefWidth="304.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="co.edu.uniquindio.gominola.view.ClienteView">
+<AnchorPane prefHeight="497.0" prefWidth="768.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="co.edu.uniquindio.gominola.view.ClienteView">
    <children>
-      <SplitPane dividerPositions="0.48606811145510825" orientation="VERTICAL" prefHeight="518.0" prefWidth="304.0">
-         <items>
-            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="225.0" prefWidth="769.0">
-               <children>
-                  <GridPane hgap="30.0" layoutX="8.0" layoutY="-11.0" prefHeight="252.0" prefWidth="286.0">
-                     <columnConstraints>
-                        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                     </columnConstraints>
-                     <rowConstraints>
-                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                     </rowConstraints>
+      <Pane prefHeight="518.0" prefWidth="768.0">
+         <children>
+            <SplitPane dividerPositions="0.48606811145510825" layoutX="235.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" orientation="VERTICAL" prefHeight="518.0" prefWidth="304.0">
+               <items>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="225.0" prefWidth="769.0">
                      <children>
-                        <Label fx:id="lbNombre" text="Nombre:" GridPane.halignment="CENTER" GridPane.valignment="BOTTOM" />
-                        <TextField fx:id="txtNombreCliente" prefHeight="26.0" prefWidth="210.0" GridPane.rowIndex="1" />
-                        <Label fx:id="lbTelefono" prefWidth="58.0" text="Telefono:" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="BOTTOM" />
-                        <TextField fx:id="txtTelefonoCliente" GridPane.rowIndex="3" />
-                        <Label fx:id="lbCorreo" text="Correo:" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="BOTTOM" />
-                        <TextField fx:id="txtCorreoCliente" GridPane.rowIndex="5" />
-                        <Button fx:id="btnAgregarCliente" mnemonicParsing="false" onAction="#agregarAction" text="Agregar/Actualizar" GridPane.halignment="LEFT" GridPane.rowIndex="6" />
-                        <Button fx:id="btnEliminarCliente" mnemonicParsing="false" onAction="#eliminarAction" text="Eliminar" GridPane.halignment="RIGHT" GridPane.rowIndex="6" />
+                        <GridPane hgap="30.0" layoutX="8.0" layoutY="-11.0" prefHeight="252.0" prefWidth="286.0">
+                           <columnConstraints>
+                              <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                           <children>
+                              <Label fx:id="lbNombre" text="Nombre:" GridPane.halignment="CENTER" GridPane.valignment="BOTTOM" />
+                              <TextField fx:id="txtNombreCliente" prefHeight="26.0" prefWidth="210.0" GridPane.rowIndex="1" />
+                              <Label fx:id="lbTelefono" prefWidth="58.0" text="Telefono:" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="BOTTOM" />
+                              <TextField fx:id="txtTelefonoCliente" GridPane.rowIndex="3" />
+                              <Label fx:id="lbCorreo" text="Correo:" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="BOTTOM" />
+                              <TextField fx:id="txtCorreoCliente" GridPane.rowIndex="5" />
+                              <Button fx:id="btnAgregarCliente" mnemonicParsing="false" onAction="#agregarAction" text="Agregar/Actualizar" GridPane.halignment="LEFT" GridPane.rowIndex="6" />
+                              <Button fx:id="btnEliminarCliente" mnemonicParsing="false" onAction="#eliminarAction" text="Eliminar" GridPane.halignment="RIGHT" GridPane.rowIndex="6" />
+                           </children>
+                        </GridPane>
                      </children>
-                  </GridPane>
-               </children>
-            </AnchorPane>
-            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="253.0" prefWidth="766.0">
-               <children>
-                  <TableView fx:id="tvTablaCliente" layoutY="1.0" prefHeight="263.0" prefWidth="302.0">
-                     <columns>
-                        <TableColumn fx:id="tblNombreCliente" prefWidth="100.0" text="Nombre" />
-                        <TableColumn fx:id="tblTelefonoCliente" prefWidth="100.0" text="Telefono" />
-                        <TableColumn fx:id="tblCorreoCliente" prefWidth="100.0" text="Correo" />
-                     </columns>
-                  </TableView>
-               </children>
-            </AnchorPane>
-         </items>
-      </SplitPane>
+                  </AnchorPane>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="253.0" prefWidth="766.0">
+                     <children>
+                        <TableView fx:id="tvTablaCliente" layoutY="1.0" prefHeight="263.0" prefWidth="302.0">
+                           <columns>
+                              <TableColumn fx:id="tblNombreCliente" prefWidth="100.0" text="Nombre" />
+                              <TableColumn fx:id="tblTelefonoCliente" prefWidth="100.0" text="Telefono" />
+                              <TableColumn fx:id="tblCorreoCliente" prefWidth="100.0" text="Correo" />
+                           </columns>
+                        </TableView>
+                     </children>
+                  </AnchorPane>
+               </items>
+            </SplitPane>
+         </children>
+      </Pane>
    </children>
 </AnchorPane>
