@@ -51,4 +51,20 @@ public class Tools {
         Stage stage = (Stage) ((Node) context).getScene().getWindow();
         stage.close();
     }
+
+    public static void limpiarCampos(TextField... campoDeTexto) {
+        for (TextField texto : campoDeTexto) {
+            texto.setText("");
+        }
+    }
+
+    public static boolean hayCamposVacios(String... camposDeTexto) {
+        for (String texto : camposDeTexto) {
+            if (texto.isEmpty() || texto.equals(" ")) {
+                return true;
+            }
+        }
+        return false;
+    }
+
 }
