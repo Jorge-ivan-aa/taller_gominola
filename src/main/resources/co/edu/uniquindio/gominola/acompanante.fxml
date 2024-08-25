@@ -13,13 +13,13 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="503.0" prefWidth="768.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="co.edu.uniquindio.gominola.view.AcompananteView">
+<AnchorPane prefHeight="503.0" prefWidth="768.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="co.edu.uniquindio.gominola.view.AcompananteView">
    <children>
-      <SplitPane dividerPositions="0.4556709265175719" orientation="VERTICAL" prefHeight="502.0" prefWidth="767.0">
+      <SplitPane dividerPositions="0.51" layoutX="-1.0" orientation="VERTICAL" prefHeight="502.0" prefWidth="780.0">
         <items>
-          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="282.0" prefWidth="766.0" style="-fx-background-color: #06A77D;">
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="254.0" prefWidth="744.0" style="-fx-background-color: #06A77D;">
                <children>
-                  <GridPane hgap="10.0" layoutY="20.0" prefHeight="205.0" prefWidth="736.0" vgap="10.0">
+                  <GridPane hgap="10.0" layoutX="15.0" layoutY="16.0" prefHeight="227.0" prefWidth="714.0" vgap="10.0">
                      <columnConstraints>
                         <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="269.0" minWidth="10.0" prefWidth="85.0" />
                         <ColumnConstraints halignment="LEFT" hgrow="SOMETIMES" maxWidth="353.0" minWidth="10.0" prefWidth="214.19998779296873" />
@@ -27,12 +27,12 @@
                         <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="238.0" minWidth="10.0" prefWidth="190.5999755859375" />
                      </columnConstraints>
                      <rowConstraints>
-                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                        <RowConstraints maxHeight="22.0" minHeight="1.0" prefHeight="1.0" vgrow="SOMETIMES" />
-                        <RowConstraints maxHeight="55.0" minHeight="10.0" prefHeight="55.0" valignment="CENTER" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="23.0" minHeight="10.0" prefHeight="22.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="36.0" minHeight="10.0" prefHeight="36.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="47.0" minHeight="10.0" prefHeight="44.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="50.0" minHeight="10.0" prefHeight="31.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="32.0" minHeight="0.0" prefHeight="0.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="55.0" minHeight="10.0" prefHeight="41.0" valignment="CENTER" vgrow="SOMETIMES" />
                      </rowConstraints>
                      <children>
                         <Label text="Nombre:">
@@ -45,7 +45,7 @@
                               <Font name="Bell MT" size="14.0" />
                            </font></Label>
                         <TextField fx:id="txtTallaAcompanante" style="-fx-background-color: #FCEFEF;" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                        <Label prefWidth="58.0" text="Telefono:" GridPane.rowIndex="2">
+                        <Label prefHeight="20.0" prefWidth="71.0" text="Telefono:" GridPane.rowIndex="2">
                            <font>
                               <Font name="Bell MT" size="14.0" />
                            </font></Label>
@@ -74,33 +74,38 @@
                            <font>
                               <Font name="Bell MT" size="14.0" />
                            </font></RadioButton>
-                        <RadioButton fx:id="rbOcupadoAcompanante" mnemonicParsing="false" onAction="#disponibilidadAcomp" text="Ocupado :(" GridPane.columnIndex="3" GridPane.rowIndex="3">
+                        <RadioButton fx:id="rbOcupadoAcompanante" mnemonicParsing="false" onAction="#disponibilidadAcomp" prefHeight="38.0" prefWidth="108.0" text="Ocupado :(" GridPane.columnIndex="3" GridPane.rowIndex="3">
                            <font>
                               <Font name="Bell MT" size="14.0" />
                            </font></RadioButton>
-                        <Button fx:id="btnAgregarAcompanante" mnemonicParsing="false" onAction="#agregarAction" style="-fx-background-color: #484A47;" text="Agregar/Actualizar" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="5" GridPane.valignment="CENTER">
+                        <Button fx:id="btnAgregarAcompanante" mnemonicParsing="false" onAction="#agregarAcompananteAction" style="-fx-background-color: #484A47;" text="Agregar" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="5" GridPane.valignment="CENTER">
                            <font>
                               <Font name="Bell MT" size="14.0" />
                            </font></Button>
-                        <Button fx:id="btnEliminarAcompanante" mnemonicParsing="false" onAction="#eliminarAction" style="-fx-background-color: #484A47;" text="Eliminar" textFill="WHITE" GridPane.columnIndex="2" GridPane.halignment="RIGHT" GridPane.rowIndex="5" GridPane.valignment="CENTER">
+                        <Button fx:id="btnEliminarAcompanante" mnemonicParsing="false" onAction="#eliminarAcompananteAction" style="-fx-background-color: #484A47;" text="Eliminar" textFill="WHITE" GridPane.columnIndex="3" GridPane.halignment="LEFT" GridPane.rowIndex="5" GridPane.valignment="CENTER">
                            <font>
                               <Font name="Bell MT" size="14.0" />
                            </font></Button>
+                        <Button fx:id="btnAgregarAcompanante1" layoutX="194.0" layoutY="202.0" mnemonicParsing="false" onAction="#actualizarAcompananteAction" style="-fx-background-color: #484A47;" text="Actualizar" textFill="WHITE" GridPane.columnIndex="2" GridPane.rowIndex="5">
+                           <font>
+                              <Font name="Bell MT" size="14.0" />
+                           </font>
+                        </Button>
                      </children>
                   </GridPane>
                </children>
             </AnchorPane>
-          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="253.0" prefWidth="766.0">
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="87.0" prefWidth="0.0">
                <children>
-                  <TableView fx:id="tvTablaAcompanante" layoutY="1.0" prefHeight="291.0" prefWidth="766.0" style="-fx-background-color: #FCEFEF;">
+                  <TableView fx:id="tvTablaAcompanante" layoutX="-1.0" layoutY="-1.0" prefHeight="291.0" prefWidth="780.0" style="-fx-background-color: #FCEFEF;">
                     <columns>
                       <TableColumn fx:id="tblNombreAcompanante" prefWidth="95.0" text="Nombre" />
-                      <TableColumn fx:id="tblEdadAcompanante" prefWidth="95.0" text="Edad" />
-                        <TableColumn fx:id="tblTallaAcompanante" prefWidth="95.0" text="Talla" />
-                        <TableColumn fx:id="tblCorreoAcompanante" prefWidth="95.0" text="Correo" />
-                        <TableColumn fx:id="tblTelefonoAcompanante" prefWidth="95.0" text="Telefono" />
-                        <TableColumn fx:id="tblSaludoAcompanante" prefWidth="95.0" text="Saludo" />
-                        <TableColumn fx:id="tblValorHoraAcompanante" prefWidth="95.0" text="Valor Hora" />
+                      <TableColumn fx:id="tblEdadAcompanante" prefWidth="52.0" text="Edad" />
+                        <TableColumn fx:id="tblTallaAcompanante" prefWidth="59.0" text="Talla" />
+                        <TableColumn fx:id="tblCorreoAcompanante" prefWidth="107.0" text="Correo" />
+                        <TableColumn fx:id="tblTelefonoAcompanante" prefWidth="110.0" text="Telefono" />
+                        <TableColumn fx:id="tblSaludoAcompanante" prefWidth="171.0" text="Saludo" />
+                        <TableColumn fx:id="tblValorHoraAcompanante" prefWidth="71.0" text="Valor Hora" />
                         <TableColumn fx:id="tblDisponibilidadAcompanante" prefWidth="100.0" text="Disponibilidad" />
                     </columns>
                   </TableView>

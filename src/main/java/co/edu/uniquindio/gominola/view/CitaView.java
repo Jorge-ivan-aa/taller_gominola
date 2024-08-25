@@ -26,33 +26,6 @@ public class CitaView {
     private URL location;
 
     @FXML
-    private Button btnAgregarCita;
-
-    @FXML
-    private Button btnEliminarCita;
-
-    @FXML
-    private GridPane gpDatosAcompanante;
-
-    @FXML
-    private Label lbFechaCita;
-
-    @FXML
-    private Label lbHoraCita;
-
-    @FXML
-    private Label lbHorasSolicitadas;
-
-    @FXML
-    private Label lbLugarEncuentro;
-
-    @FXML
-    private Label lbNombreAcompananteCita;
-
-    @FXML
-    private Label lbNombreClienteCita;
-
-    @FXML
     private TableColumn<Cita, String>  tblCantHoras;
 
     @FXML
@@ -93,6 +66,11 @@ public class CitaView {
 
     @FXML
     void agregarCitaAction(ActionEvent event) {
+
+    }
+
+    @FXML
+    void actualizarCitaAction(ActionEvent event) {
 
     }
 

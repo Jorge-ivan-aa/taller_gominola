@@ -84,7 +84,7 @@ public class AcompananteView {
     private GridPane gpDatosAcompanante;
 
     @FXML
-    void agregarAction(ActionEvent event) {
+    void agregarAcompananteAction(ActionEvent event) {
         String correo = txtCorreoAcompanante.getText();
         String edad = txtEdadAcompanante.getText();
         String nombre = txtNombreAcompanante.getText();
@@ -103,7 +103,7 @@ public class AcompananteView {
     }
 
     @FXML
-    void eliminarAction(ActionEvent event) {
+    void eliminarAcompananteAction(ActionEvent event) {
         String nombre = txtNombreAcompanante.getText();
 
         if (!Tools.hayCamposVacios(nombre)) {
@@ -112,6 +112,11 @@ public class AcompananteView {
         } else {
             Tools.mostrarMensaje("Error", null, "Hay campos vacíos", Alert.AlertType.ERROR);
         }
+    }
+
+    @FXML
+    void actualizarAcompananteAction(ActionEvent event) {
+
     }
 
     @FXML

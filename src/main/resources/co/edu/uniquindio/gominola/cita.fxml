@@ -15,87 +15,102 @@
 
 <AnchorPane prefHeight="542.0" prefWidth="750.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="co.edu.uniquindio.gominola.view.CitaView">
    <children>
-      <Pane layoutX="182.0" prefHeight="542.0" prefWidth="756.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="12.0" AnchorPane.topAnchor="0.0" />
-      <AnchorPane prefHeight="538.0" prefWidth="768.0">
+      <Pane layoutX="-21.0" prefHeight="542.0" prefWidth="768.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="-21.0" AnchorPane.rightAnchor="21.0" AnchorPane.topAnchor="0.0">
          <children>
-            <SplitPane dividerPositions="0.4725705329153605" layoutX="1.0" layoutY="-1.0" orientation="VERTICAL" prefHeight="542.0" prefWidth="756.0">
-               <items>
-                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="282.0" prefWidth="766.0" style="-fx-background-color: #06A77D;">
-                     <children>
-                        <GridPane fx:id="gpDatosAcompañante" hgap="10.0" layoutX="-28.0" layoutY="23.0" prefHeight="189.0" prefWidth="768.0" vgap="10.0">
-                           <columnConstraints>
-                              <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                              <ColumnConstraints halignment="LEFT" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                              <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                              <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                           </columnConstraints>
-                           <rowConstraints>
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                              <RowConstraints maxHeight="27.0" minHeight="8.0" prefHeight="8.0" vgrow="SOMETIMES" />
-                              <RowConstraints maxHeight="57.0" minHeight="10.0" prefHeight="57.0" vgrow="SOMETIMES" />
-                           </rowConstraints>
+            <AnchorPane layoutX="19.0" prefHeight="538.0" prefWidth="768.0">
+               <children>
+                  <SplitPane dividerPositions="0.4725705329153605" layoutX="1.0" layoutY="-1.0" orientation="VERTICAL" prefHeight="542.0" prefWidth="756.0">
+                     <items>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="252.0" prefWidth="785.0" style="-fx-background-color: #06A77D;">
                            <children>
-                              <Label fx:id="lbNombreClienteCita" text="Nombre Cliente:">
-                                 <font>
-                                    <Font name="Bell MT" size="14.0" />
-                                 </font></Label>
-                              <TextField fx:id="txtNombreClienteCita" prefHeight="26.0" prefWidth="210.0" style="-fx-background-color: #FCEFEF;" GridPane.columnIndex="1" />
-                              <Label fx:id="lbFechaCita" text="Fecha Cita:" GridPane.halignment="CENTER" GridPane.rowIndex="1">
-                                 <font>
-                                    <Font name="Bell MT" size="14.0" />
-                                 </font></Label>
-                              <TextField fx:id="txtFechaCita" style="-fx-background-color: #FCEFEF;" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                              <Label fx:id="lbLugarEncuentro" prefHeight="18.0" prefWidth="105.0" text="Lugar Encuentro:" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
-                                 <font>
-                                    <Font name="Bell MT" size="14.0" />
-                                 </font></Label>
-                              <TextField fx:id="txtLugarCita" style="-fx-background-color: #FCEFEF;" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-                              <Label fx:id="lbNombreAcompañanteCita" text="Nombre Acompañante: " GridPane.columnIndex="2">
-                                 <font>
-                                    <Font name="Bell MT" size="14.0" />
-                                 </font></Label>
-                              <Label fx:id="lbHoraCita" text="Hora Cita:" GridPane.columnIndex="2" GridPane.rowIndex="1">
-                                 <font>
-                                    <Font name="Bell MT" size="14.0" />
-                                 </font></Label>
-                              <Label fx:id="lbHorasSolicitadas" text="Cantidad Horas:" GridPane.columnIndex="2" GridPane.rowIndex="2">
-                                 <font>
-                                    <Font name="Bell MT" size="14.0" />
-                                 </font></Label>
-                              <TextField fx:id="txtNombreAcompananteCita" style="-fx-background-color: #FCEFEF;" GridPane.columnIndex="3" />
-                              <TextField fx:id="txtHoraCita" style="-fx-background-color: #FCEFEF;" GridPane.columnIndex="3" GridPane.rowIndex="1" />
-                              <TextField fx:id="txtCantidadHorasCita" style="-fx-background-color: #FCEFEF;" GridPane.columnIndex="3" GridPane.rowIndex="2" />
-                              <Button fx:id="btnAgregarCita" mnemonicParsing="false" onAction="#agregarCitaAction" style="-fx-background-color: #484A47;" text="Agendar/Actualizar Cita" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="4" GridPane.valignment="BOTTOM">
-                                 <font>
-                                    <Font name="Bell MT" size="14.0" />
-                                 </font></Button>
-                              <Button fx:id="btnEliminarCita" mnemonicParsing="false" onAction="#eliminarCitaAction" style="-fx-background-color: #484A47;" text="Cancelar cita" textFill="WHITE" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="BOTTOM">
-                                 <font>
-                                    <Font name="Bell MT" size="14.0" />
-                                 </font></Button>
+                              <GridPane hgap="10.0" layoutX="-16.0" layoutY="23.0" prefHeight="189.0" prefWidth="750.0" vgap="10.0">
+                                 <columnConstraints>
+                                    <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                    <ColumnConstraints halignment="LEFT" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                    <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                    <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="27.0" minHeight="8.0" prefHeight="8.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="57.0" minHeight="10.0" prefHeight="57.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                                 <children>
+                                    <Label text="Cliente:" GridPane.halignment="CENTER">
+                                       <font>
+                                          <Font name="Bell MT" size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="txtNombreClienteCita" prefHeight="26.0" prefWidth="210.0" style="-fx-background-color: #FCEFEF;" GridPane.columnIndex="1" />
+                                    <Label text="Fecha Cita:" GridPane.halignment="CENTER" GridPane.rowIndex="1">
+                                       <font>
+                                          <Font name="Bell MT" size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="txtFechaCita" style="-fx-background-color: #FCEFEF;" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                    <Label prefHeight="20.0" prefWidth="122.0" text="Lugar Encuentro:" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+                                       <font>
+                                          <Font name="Bell MT" size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="txtLugarCita" style="-fx-background-color: #FCEFEF;" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                    <Label text="Acompañante: " GridPane.columnIndex="2">
+                                       <font>
+                                          <Font name="Bell MT" size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label text="Hora Cita:" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                                       <font>
+                                          <Font name="Bell MT" size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label text="Cantidad Horas:" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                                       <font>
+                                          <Font name="Bell MT" size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="txtNombreAcompananteCita" style="-fx-background-color: #FCEFEF;" GridPane.columnIndex="3" />
+                                    <TextField fx:id="txtHoraCita" style="-fx-background-color: #FCEFEF;" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+                                    <TextField fx:id="txtCantidadHorasCita" style="-fx-background-color: #FCEFEF;" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+                                    <Button mnemonicParsing="false" onAction="#actualizarCitaAction" style="-fx-background-color: #484A47;" text="Actualizar Cita" textFill="WHITE" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER">
+                                       <font>
+                                          <Font name="Bell MT" size="14.0" />
+                                       </font>
+                                    </Button>
+                                    <Button mnemonicParsing="false" onAction="#eliminarCitaAction" style="-fx-background-color: #484A47;" text="Cancelar cita" textFill="WHITE" GridPane.columnIndex="3" GridPane.halignment="LEFT" GridPane.rowIndex="4" GridPane.valignment="CENTER">
+                                       <font>
+                                          <Font name="Bell MT" size="14.0" />
+                                       </font>
+                                    </Button>
+                                    <Button mnemonicParsing="false" onAction="#agregarCitaAction" style="-fx-background-color: #484A47;" text="Agendar Cita" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="4" GridPane.valignment="CENTER">
+                                       <font>
+                                          <Font name="Bell MT" size="14.0" />
+                                       </font>
+                                    </Button>
+                                 </children>
+                              </GridPane>
                            </children>
-                        </GridPane>
-                     </children>
-                  </AnchorPane>
-                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="253.0" prefWidth="766.0">
-                     <children>
-                        <TableView fx:id="tvTablaCitas" layoutX="-2.0" layoutY="-4.0" prefHeight="291.0" prefWidth="775.0" style="-fx-background-color: #FCEFEF;">
-                           <columns>
-                              <TableColumn fx:id="tblNombreClienteCita" prefWidth="125.0" text="Cliente" />
-                              <TableColumn fx:id="tblNombreAcompananteCita" prefWidth="125.0" text="Acompañante" />
-                              <TableColumn fx:id="tblFechaCita" prefWidth="125.0" text="Fecha" />
-                              <TableColumn fx:id="tblHoraCita" prefWidth="125.0" text="Hora" />
-                              <TableColumn fx:id="tblLugarCita" prefWidth="125.0" text="Lugar" />
-                              <TableColumn fx:id="tblCantHoras" prefWidth="125.0" text="Cantidad Horas" />
-                           </columns>
-                        </TableView>
-                     </children>
-                  </AnchorPane>
-               </items>
-            </SplitPane>
-         </children>
-      </AnchorPane>
+                        </AnchorPane>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="282.0" prefWidth="831.0">
+                           <children>
+                              <TableView fx:id="tvTablaCitas" layoutX="-2.0" layoutY="-4.0" prefHeight="291.0" prefWidth="775.0" style="-fx-background-color: #FCEFEF;">
+                                 <columns>
+                                    <TableColumn fx:id="tblNombreClienteCita" prefWidth="121.0" text="Cliente" />
+                                    <TableColumn fx:id="tblNombreAcompananteCita" prefWidth="138.0" text="Acompañante" />
+                                    <TableColumn fx:id="tblFechaCita" prefWidth="175.0" text="Fecha" />
+                                    <TableColumn fx:id="tblHoraCita" prefWidth="65.0" text="Hora" />
+                                    <TableColumn fx:id="tblLugarCita" prefWidth="150.0" text="Lugar" />
+                                    <TableColumn fx:id="tblCantHoras" prefWidth="101.0" text="Cantidad Horas" />
+                                 </columns>
+                              </TableView>
+                           </children>
+                        </AnchorPane>
+                     </items>
+                  </SplitPane>
+               </children>
+            </AnchorPane>
+         </children></Pane>
    </children>
 </AnchorPane>
