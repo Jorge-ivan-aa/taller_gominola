@@ -26,10 +26,10 @@ public class AcompananteView {
     private URL location;
 
     @FXML
-    private Button btnAgregarAcompañante;
+    private Button btnAgregarAcompanante;
 
     @FXML
-    private Button btnEliminarAcompañante;
+    private Button btnEliminarAcompanante;
 
     @FXML
     private Label lbCorreo;
@@ -53,60 +53,60 @@ public class AcompananteView {
     private Label lbValorHora;
 
     @FXML
-    private RadioButton rbDisponibleAcompañante;
+    private RadioButton rbDisponibleAcompanante;
 
     @FXML
-    private RadioButton rbOcupadoAcompañante;
+    private RadioButton rbOcupadoAcompanante;
 
     @FXML
-    private TableColumn<Acompanante, String> tblCorreoAcompañante;
+    private TableColumn<Acompanante, String> tblCorreoAcompanante;
 
     @FXML
-    private TableColumn<Acompanante, String> tblDisponibilidadAcompañante;
+    private TableColumn<Acompanante, String> tblDisponibilidadAcompanante;
 
     @FXML
-    private TableColumn<Acompanante, String> tblEdadAcompañante;
+    private TableColumn<Acompanante, String> tblEdadAcompanante;
 
     @FXML
-    private TableColumn<Acompanante, String> tblNombreAcompañante;
+    private TableColumn<Acompanante, String> tblNombreAcompanante;
 
     @FXML
-    private TableColumn<Acompanante, String> tblSaludoAcompañante;
+    private TableColumn<Acompanante, String> tblSaludoAcompanante;
 
     @FXML
-    private TableColumn<Acompanante, String> tblTallaAcompañante;
+    private TableColumn<Acompanante, String> tblTallaAcompanante;
 
     @FXML
-    private TableColumn<Acompanante, String> tblTelefonoAcompañante;
+    private TableColumn<Acompanante, String> tblTelefonoAcompanante;
 
     @FXML
-    private TableColumn<Acompanante, String> tblValorHoraAcompañante;
+    private TableColumn<Acompanante, String> tblValorHoraAcompanante;
 
     @FXML
-    private TableView<Acompanante> tvTablaAcompañante;
+    private TableView<Acompanante> tvTablaAcompanante;
 
     @FXML
-    private TextField txtCorreoAcompañante;
+    private TextField txtCorreoAcompanante;
 
     @FXML
-    private TextField txtEdadAcompañante;
+    private TextField txtEdadAcompanante;
 
     @FXML
-    private TextField txtNombreAcompañante;
+    private TextField txtNombreAcompanante;
 
     @FXML
-    private TextField txtSaludoAcompañante;
+    private TextField txtSaludoAcompanante;
 
     @FXML
-    private TextField txtTallaAcompañante;
+    private TextField txtTallaAcompanante;
 
     @FXML
-    private TextField txtTelefonoAcompañante;
+    private TextField txtTelefonoAcompanante;
 
     @FXML
-    private TextField txtValorHoraAcompañante;
+    private TextField txtValorHoraAcompanante;
     @FXML
-    private GridPane gpDatosAcompañante;
+    private GridPane gpDatosAcompanante;
 
     @FXML
     void agregarAction(ActionEvent event) {

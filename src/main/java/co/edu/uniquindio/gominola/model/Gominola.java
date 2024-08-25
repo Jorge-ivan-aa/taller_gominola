@@ -1,18 +1,16 @@
 package co.edu.uniquindio.gominola.model;
 
-import co.edu.uniquindio.gominola.view.AcompananteView;
-
 import java.util.ArrayList;
 
 public class Gominola {
 
     private ArrayList<Cliente> listaCliente;
-    private ArrayList<Acompanante> listaAcompante;
+    private ArrayList<Acompanante> listaAcompanante;
     private ArrayList<Cita> listaCita;
 
     public Gominola() {
         listaCliente = new ArrayList<>();
-        listaAcompante = new ArrayList<>();
+        listaAcompanante = new ArrayList<>();
         listaCita = new ArrayList<>();
     }
 
@@ -25,11 +23,11 @@ public class Gominola {
     }
 
     public void addAcompanante(Acompanante acompanante) {
-        listaAcompante.add(acompanante);
+        listaAcompanante.add(acompanante);
     }
 
     public void rmAcompanante(int index) {
-        listaAcompante.remove(index);
+        listaAcompanante.remove(index);
     }
 
     public void addCita(Cita cita) {
@@ -44,8 +42,8 @@ public class Gominola {
         return listaCliente;
     }
 
-    public ArrayList<Acompanante> getListaAcompante() {
-        return listaAcompante;
+    public ArrayList<Acompanante> getListaAcompanante() {
+        return listaAcompanante;
     }
 
     public ArrayList<Cita> getListaCita() {
