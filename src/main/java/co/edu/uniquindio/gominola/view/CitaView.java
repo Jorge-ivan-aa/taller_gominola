@@ -2,9 +2,6 @@ package co.edu.uniquindio.gominola.view;
 
 import java.net.URL;
 import java.util.ResourceBundle;
-
-import co.edu.uniquindio.gominola.model.Acompanante;
-import co.edu.uniquindio.gominola.model.Cita;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -29,7 +26,7 @@ public class CitaView {
     private Button btnEliminarCita;
 
     @FXML
-    private GridPane gpDatosAcompanante;
+    private GridPane gpDatosAcompañante;
 
     @FXML
     private Label lbFechaCita;
@@ -44,55 +41,28 @@ public class CitaView {
     private Label lbLugarEncuentro;
 
     @FXML
-    private Label lbNombreAcompananteCita;
+    private Label lbNombreAcompañanteCita;
 
     @FXML
     private Label lbNombreClienteCita;
 
     @FXML
-
-    private TableColumn<String, ?> tblCorreoAcompanante;
-
-    @FXML
-    private TableColumn<String, ?> tblDisponibilidadAcompanante;
+    private TableColumn<String, Cita> tblCantHoras;
 
     @FXML
-    private TableColumn<String, ?> tblEdadAcompanante;
+    private TableColumn<String, Cita> tblFechaCita;
 
     @FXML
-    private TableColumn<String, ?> tblNombreAcompanante;
+    private TableColumn<String, Cita> tblHoraCita;
 
     @FXML
-    private TableColumn<String, ?> tblSaludoAcompanante;
+    private TableColumn<String, Cita> tblLugarCita;
 
     @FXML
-    private TableColumn<String, ?> tblTallaAcompanante;
+    private TableColumn<String, Acompanante> tblNombreAcompananteCita;
 
     @FXML
-    private TableColumn<String, ?> tblTelefonoAcompanante;
-
-    private TableColumn<String, Acompanante> tblCorreoAcompañante;
-
-    @FXML
-    private TableColumn<String, Acompanante> tblDisponibilidadAcompañante;
-
-    @FXML
-    private TableColumn<String, Acompanante> tblEdadAcompañante;
-
-    @FXML
-    private TableColumn<String, Acompanante> tblNombreAcompañante;
-
-    @FXML
-    private TableColumn<String, Acompanante> tblSaludoAcompañante;
-
-    @FXML
-    private TableColumn<String, Acompanante> tblTallaAcompañante;
-
-    @FXML
-    private TableColumn<String, Acompanante> tblTelefonoAcompañante;
-
-    @FXML
-    private TableColumn<String, Acompanante> tblValorHoraAcompanante;
+    private TableColumn<String, Cliente> tblNombreClienteCita;
 
     @FXML
     private TableView<Cita> tvTablaCitas;
@@ -116,11 +86,6 @@ public class CitaView {
     private TextField txtNombreClienteCita;
 
     @FXML
-    void initialize() {
-
-    }
-
-    @FXML
     void agregarCitaAction(ActionEvent event) {
 
     }
@@ -129,4 +94,10 @@ public class CitaView {
     void eliminarCitaAction(ActionEvent event) {
 
     }
+
+    @FXML
+    void initialize() {
+
+    }
+
 }
