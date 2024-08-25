@@ -3,9 +3,7 @@ package co.edu.uniquindio.gominola.controller;
 import co.edu.uniquindio.gominola.factory.ModelFactory;
 import co.edu.uniquindio.gominola.model.Acompanante;
 import co.edu.uniquindio.gominola.model.Cita;
-import co.edu.uniquindio.gominola.model.Cita;
 import co.edu.uniquindio.gominola.model.Cliente;
-import co.edu.uniquindio.gominola.view.CitaView;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 
@@ -31,13 +29,25 @@ public class CitaController {
         this.listaCitaObservable.addAll(this.factory.getGominola().getListaCita());
     }
 
-    public void eliminarCita(String nombre){
-        ArrayList<Cita> cita = factory.getGominola().getListaCita();
-        for (int i = 0; i < cita.size(); i++){
-            if (Objects.equals(cita.get(i).getAcompanante().getNombre(), nombre)){
-                cita.remove(cita.get(i));
-                this.listaCitaObservable.remove(cita.get(i));
+    public String eliminarCita(String nombre) {
+
+        if (this.consultarCita(nombre) == null) {
+            return "La cita ingresada no existe";
+        } else {
+            int index = -1;
+            ArrayList<Cita> Citas = factory.getGominola().getListaCita();
+            for (int i = 0; i < Citas.size(); i++) {
+                if (Objects.equals(Citas.get(i).getAcompanante().getNombre(), nombre)) {
+                    index = i;
+                }
             }
+
+            if (index != -1) {
+                this.listaCitaObservable.remove(Citas.get(index));
+                Citas.remove(Citas.get(index));
+            }
+
+            return "La cita fue eliminado correctamente";
         }
     }
 
@@ -53,28 +63,49 @@ public class CitaController {
 
     public String crearCita(Acompanante acompanante, Cliente cliente, Date fecha, String hora, String lugar, int horas) {
         ArrayList<Cita> citas = factory.getGominola().getListaCita();
-        for (Cita cita : citas) {
-            if (Objects.equals(cita.getAcompanante().getNombre(), acompanante.getNombre())) {
-                return "El citas ingresado ya se existe";
-            }
+
+        if (this.consultarCita(acompanante.getNombre()) != null) {
+            return "La cita ingresada ya existe";
+        } else {
+            Cita nuevoCita = new Cita(acompanante, cliente, fecha, hora, lugar, horas);
+            this.factory.getGominola().addCita(nuevoCita);
+            this.listaCitaObservable.add(nuevoCita);
+            return "Cita registrado exitosamente";
         }
-        Cita nuevoCita = new Cita(acompanante, cliente, fecha, hora, lugar, horas);
-        this.factory.getGominola().addCita(nuevoCita);
-        this.listaCitaObservable.add(nuevoCita);
-        return "Cita registrado exitosamente";
+
     }
 
-    public void actualizarCita(Acompanante acompanante, Cliente cliente, Date fecha, String hora, String lugar, int horas){
+    public String actualizarCita(Acompanante acompanante, Cliente cliente, Date fecha, String hora, String lugar, int horas){
         ArrayList<Cita> citas = factory.getGominola().getListaCita();
-        for (int i = 0; i < citas.size(); i++){
-            if (Objects.equals(citas.get(i).getAcompanante().getNombre(), acompanante.getNombre())){
-                Cita nuevoAcompanante = new Cita(acompanante, cliente, fecha, hora, lugar, horas);
-                citas.remove(citas.get(i));
-                citas.add(nuevoAcompanante);
-                this.listaCitaObservable.remove(citas.get(i));
-                this.listaCitaObservable.add(nuevoAcompanante);
+
+        if (this.consultarCita(acompanante.getNombre()) == null) {
+            return "La cita ingresada no existe";
+
+        } else {
+            for (int i = 0; i < citas.size(); i++) {
+                if (Objects.equals(citas.get(i).getAcompanante().getNombre(), acompanante.getNombre())) {
+                    Cita nuevoCita = new Cita(acompanante, cliente, fecha, hora, lugar, horas);
+                    citas.remove(citas.get(i));
+                    citas.add(nuevoCita);
+                    this.listaCitaObservable.remove(citas.get(i));
+                    this.listaCitaObservable.add(nuevoCita);
+
+                }
+
             }
+
+            return "La cita ingresada fue actualizada";
         }
     }
+//        for (int i = 0; i < citas.size(); i++){
+//            if (Objects.equals(citas.get(i).getAcompanante().getNombre(), acompanante.getNombre())){
+//                Cita nuevoAcompanante = new Cita(acompanante, cliente, fecha, hora, lugar, horas);
+//                citas.remove(citas.get(i));
+//                citas.add(nuevoAcompanante);
+//                this.listaCitaObservable.remove(citas.get(i));
+//                this.listaCitaObservable.add(nuevoAcompanante);
+//            }
+//        }
+//    }
 
 }
