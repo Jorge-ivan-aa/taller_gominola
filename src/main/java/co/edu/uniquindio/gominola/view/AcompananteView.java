@@ -8,12 +8,7 @@ import co.edu.uniquindio.gominola.model.Acompanante;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.control.Button;
-import javafx.scene.control.Label;
-import javafx.scene.control.RadioButton;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.scene.layout.GridPane;
 
 public class AcompananteView {
@@ -90,12 +85,33 @@ public class AcompananteView {
 
     @FXML
     void agregarAction(ActionEvent event) {
+        String correo = txtCorreoAcompanante.getText();
+        String edad = txtEdadAcompanante.getText();
+        String nombre = txtNombreAcompanante.getText();
+        String saludo = txtSaludoAcompanante.getText();
+        String talla = txtTallaAcompanante.getText();
+        String telefono = txtTelefonoAcompanante.getText();
+        String valorHora = txtValorHoraAcompanante.getText();
 
+        if (!Tools.hayCamposVacios(correo, edad, nombre, saludo, talla, telefono, valorHora)) {
+            String resultado = acompananteController.crearAcompanante(nombre, edad, talla, correo, telefono, saludo, Integer.parseInt(valorHora));
+            Tools.mostrarMensaje("Información", null, resultado, Alert.AlertType.INFORMATION);
+        } else {
+            Tools.mostrarMensaje("Error", null, "Hay campos vacíos", Alert.AlertType.ERROR);
+
+        }
     }
 
     @FXML
     void eliminarAction(ActionEvent event) {
+        String nombre = txtNombreAcompanante.getText();
 
+        if (!Tools.hayCamposVacios(nombre)) {
+            String resultado = acompananteController.eliminarAcompanante(nombre);
+            Tools.mostrarMensaje("Información", null, resultado, Alert.AlertType.INFORMATION);
+        } else {
+            Tools.mostrarMensaje("Error", null, "Hay campos vacíos", Alert.AlertType.ERROR);
+        }
     }
 
     @FXML

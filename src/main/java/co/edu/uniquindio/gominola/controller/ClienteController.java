@@ -54,7 +54,7 @@ public class ClienteController {
         ArrayList<Cliente> Clientes = factory.getGominola().getListaCliente();
         for (Cliente Cliente : Clientes) {
             if (Objects.equals(Cliente.getNombre(), nombre)) {
-                return "El Clientes ingresado ya se existe";
+                return "El Clientes ingresado ya existe";
             }
         }
         Cliente nuevoCliente = new Cliente(nombre, correo, telefono);
