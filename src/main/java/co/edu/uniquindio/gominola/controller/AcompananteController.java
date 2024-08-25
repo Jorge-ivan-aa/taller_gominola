@@ -2,6 +2,7 @@ package co.edu.uniquindio.gominola.controller;
 
 import co.edu.uniquindio.gominola.factory.ModelFactory;
 import co.edu.uniquindio.gominola.model.Acompanante;
+import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 
 public class AcompananteController {
@@ -10,6 +11,7 @@ public class AcompananteController {
 
     public AcompananteController() {
         this.factory = ModelFactory.getIntance();
+        this.listaAcompananteObservable = FXCollections.observableArrayList();
         this.sincronizarData();
     }
 
