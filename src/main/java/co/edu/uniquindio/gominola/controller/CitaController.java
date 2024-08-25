@@ -93,19 +93,8 @@ public class CitaController {
                 }
 
             }
-
             return "La cita ingresada fue actualizada";
         }
     }
-//        for (int i = 0; i < citas.size(); i++){
-//            if (Objects.equals(citas.get(i).getAcompanante().getNombre(), acompanante.getNombre())){
-//                Cita nuevoAcompanante = new Cita(acompanante, cliente, fecha, hora, lugar, horas);
-//                citas.remove(citas.get(i));
-//                citas.add(nuevoAcompanante);
-//                this.listaCitaObservable.remove(citas.get(i));
-//                this.listaCitaObservable.add(nuevoAcompanante);
-//            }
-//        }
-//    }
 
 }
