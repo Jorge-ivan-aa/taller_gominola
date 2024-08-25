@@ -12,11 +12,11 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.RowConstraints?>
 
-<AnchorPane prefHeight="497.0" prefWidth="768.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="co.edu.uniquindio.gominola.view.ClienteView">
+<AnchorPane prefHeight="332.0" prefWidth="778.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="co.edu.uniquindio.gominola.view.ClienteView">
    <children>
-      <Pane prefHeight="518.0" prefWidth="768.0">
+      <Pane prefHeight="326.0" prefWidth="777.0">
          <children>
-            <SplitPane dividerPositions="0.48606811145510825" layoutX="235.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" orientation="VERTICAL" prefHeight="518.0" prefWidth="304.0">
+            <SplitPane dividerPositions="0.5" layoutX="24.0" layoutY="14.0" prefHeight="296.0" prefWidth="745.0">
                <items>
                   <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="225.0" prefWidth="769.0">
                      <children>
@@ -34,25 +34,25 @@
                               <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                            </rowConstraints>
                            <children>
-                              <Label fx:id="lbNombre" text="Nombre:" GridPane.halignment="CENTER" GridPane.valignment="BOTTOM" />
-                              <TextField fx:id="txtNombreCliente" prefHeight="26.0" prefWidth="210.0" GridPane.rowIndex="1" />
-                              <Label fx:id="lbTelefono" prefWidth="58.0" text="Telefono:" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="BOTTOM" />
-                              <TextField fx:id="txtTelefonoCliente" GridPane.rowIndex="3" />
-                              <Label fx:id="lbCorreo" text="Correo:" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="BOTTOM" />
-                              <TextField fx:id="txtCorreoCliente" GridPane.rowIndex="5" />
-                              <Button fx:id="btnAgregarCliente" mnemonicParsing="false" onAction="#agregarAction" text="Agregar/Actualizar" GridPane.halignment="LEFT" GridPane.rowIndex="6" />
-                              <Button fx:id="btnEliminarCliente" mnemonicParsing="false" onAction="#eliminarAction" text="Eliminar" GridPane.halignment="RIGHT" GridPane.rowIndex="6" />
+                              <Label fx:id="lbNombre1" text="Nombre:" GridPane.halignment="CENTER" GridPane.valignment="BOTTOM" />
+                              <TextField fx:id="txtNombreCliente1" prefHeight="26.0" prefWidth="210.0" GridPane.rowIndex="1" />
+                              <Label fx:id="lbTelefono1" prefWidth="58.0" text="Telefono:" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="BOTTOM" />
+                              <TextField fx:id="txtTelefonoCliente1" GridPane.rowIndex="3" />
+                              <Label fx:id="lbCorreo1" text="Correo:" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="BOTTOM" />
+                              <TextField fx:id="txtCorreoCliente1" GridPane.rowIndex="5" />
+                              <Button fx:id="btnAgregarCliente1" mnemonicParsing="false" onAction="#agregarAction" text="Agregar/Actualizar" GridPane.halignment="LEFT" GridPane.rowIndex="6" />
+                              <Button fx:id="btnEliminarCliente1" mnemonicParsing="false" onAction="#eliminarAction" text="Eliminar" GridPane.halignment="RIGHT" GridPane.rowIndex="6" />
                            </children>
                         </GridPane>
                      </children>
                   </AnchorPane>
                   <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="253.0" prefWidth="766.0">
                      <children>
-                        <TableView fx:id="tvTablaCliente" layoutY="1.0" prefHeight="263.0" prefWidth="302.0">
+                        <TableView fx:id="tvTablaCliente" layoutY="1.0" prefHeight="294.0" prefWidth="370.0">
                            <columns>
-                              <TableColumn fx:id="tblNombreCliente" prefWidth="100.0" text="Nombre" />
-                              <TableColumn fx:id="tblTelefonoCliente" prefWidth="100.0" text="Telefono" />
-                              <TableColumn fx:id="tblCorreoCliente" prefWidth="100.0" text="Correo" />
+                              <TableColumn fx:id="tblNombreCliente" prefWidth="130.0" text="Nombre" />
+                              <TableColumn fx:id="tblTelefonoCliente" prefWidth="130.0" text="Telefono" />
+                              <TableColumn fx:id="tblCorreoCliente" prefWidth="130.0" text="Correo" />
                            </columns>
                         </TableView>
                      </children>
