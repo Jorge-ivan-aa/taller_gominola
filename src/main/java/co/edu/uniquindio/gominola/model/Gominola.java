@@ -39,4 +39,16 @@ public class Gominola {
     public void rmCita(int index) {
         listaCita.remove(index);
     }
+
+    public ArrayList<Cliente> getListaCliente() {
+        return listaCliente;
+    }
+
+    public ArrayList<Acompanante> getListaAcompante() {
+        return listaAcompante;
+    }
+
+    public ArrayList<Cita> getListaCita() {
+        return listaCita;
+    }
 }

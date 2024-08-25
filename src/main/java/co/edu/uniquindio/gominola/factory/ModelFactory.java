@@ -16,4 +16,8 @@ public class ModelFactory {
         }
         return instance;
     }
+
+    public Gominola getGominola() {
+        return gominola;
+    }
 }
