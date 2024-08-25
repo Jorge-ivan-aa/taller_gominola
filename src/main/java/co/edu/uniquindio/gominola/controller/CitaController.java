@@ -9,12 +9,10 @@ public class CitaController {
     private ModelFactory factory;
     private ObservableList<Cita> listaCitaObservable;
 
-
     public CitaController(ModelFactory factory) {
         this.factory = ModelFactory.getIntance();
         this.sincronizarData();
     }
-
 
     public ObservableList<Cita> getListaProductoObservable() {
         return listaCitaObservable;
@@ -23,4 +21,5 @@ public class CitaController {
     public void sincronizarData() {
         this.listaCitaObservable.addAll(this.factory.getGominola().getListaCita());
     }
+
 }
