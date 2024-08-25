@@ -29,7 +29,7 @@ public class ClienteController {
     public String eliminarCliente(String nombre) {
 
         if (this.consultarCliente(nombre) == null) {
-            return "La cita ingresada no existe";
+            return "El cliente ingresado no existe";
         } else {
             int index = -1;
             ArrayList<Cliente> Clientes = factory.getGominola().getListaCliente();
@@ -42,7 +42,7 @@ public class ClienteController {
                 this.listaClienteObservable.remove(Clientes.get(index));
                 Clientes.remove(Clientes.get(index));
             }
-            return "La cita fue eliminado correctamente";
+            return "El cliente fue eliminado correctamente";
         }
     }
 
@@ -60,12 +60,12 @@ public class ClienteController {
         ArrayList<Cliente> Clientes = factory.getGominola().getListaCliente();
 
         if (this.consultarCliente(nombre) != null) {
-            return "La cita ingresada ya existe";
+            return "El cliente ingresado ya existe";
         } else {
             Cliente nuevoCliente = new Cliente(nombre, correo, telefono);
             this.factory.getGominola().addCliente(nuevoCliente);
             this.listaClienteObservable.add(nuevoCliente);
-            return "Cita registrado exitosamente";
+            return "Cliente registrado exitosamente";
         }
     }
 
@@ -73,7 +73,7 @@ public class ClienteController {
         ArrayList<Cliente> Clientes = factory.getGominola().getListaCliente();
 
         if (this.consultarCliente(nombre) == null) {
-            return "La cita ingresada no existe";
+            return "El cliente ingresado no existe";
 
         } else {
             for (int i = 0; i < Clientes.size(); i++) {
@@ -85,7 +85,7 @@ public class ClienteController {
                     this.listaClienteObservable.add(nuevoCliente);
                 }
             }
-            return "La cita fue actualizada correctamente";
+            return "El cliente fue actualizado correctamente";
 
         }
     }
