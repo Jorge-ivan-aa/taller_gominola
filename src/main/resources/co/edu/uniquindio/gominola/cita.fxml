@@ -12,7 +12,7 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.RowConstraints?>
 
-<AnchorPane prefHeight="539.0" prefWidth="781.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="co.edu.uniquindio.gominola.view.CitaView">
+<AnchorPane prefHeight="539.0" prefWidth="783.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="co.edu.uniquindio.gominola.view.CitaView">
    <children>
       <Pane layoutX="182.0" prefHeight="539.0" prefWidth="784.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
       <AnchorPane prefHeight="538.0" prefWidth="768.0">
@@ -21,7 +21,7 @@
                <items>
                   <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="282.0" prefWidth="766.0">
                      <children>
-                        <GridPane fx:id="gpDatosAcompañante" hgap="10.0" layoutX="-48.0" layoutY="8.0" prefHeight="218.0" prefWidth="799.0" vgap="10.0">
+                        <GridPane fx:id="gpDatosAcompañante" hgap="10.0" layoutX="-39.0" layoutY="8.0" prefHeight="218.0" prefWidth="790.0" vgap="10.0">
                            <columnConstraints>
                               <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
                               <ColumnConstraints halignment="LEFT" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
