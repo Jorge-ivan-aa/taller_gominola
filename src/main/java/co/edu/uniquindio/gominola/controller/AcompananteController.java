@@ -59,4 +59,18 @@ public class AcompananteController {
         return "Acompañante registrado exitosamente";
     }
 
+
+    public void actualizarAcompanante(String nombre, String edad, String talla, String correo, String telefono, String saludo, int valorHora){
+        ArrayList<Acompanante> acompanantes = factory.getGominola().getListaAcompanante();
+        for (int i = 0; i < acompanantes.size(); i++){
+            if (Objects.equals(acompanantes.get(i).getNombre(), nombre)){
+                Acompanante nuevoAcompanante = new Acompanante(nombre, edad, talla, correo, telefono, saludo, valorHora);
+                acompanantes.remove(acompanantes.get(i));
+                acompanantes.add(nuevoAcompanante);
+                this.listaAcompananteObservable.remove(acompanantes.get(i));
+                this.listaAcompananteObservable.add(nuevoAcompanante);
+            }
+        }
+    }
+
 }
