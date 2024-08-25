@@ -16,12 +16,12 @@ public class CitaController {
     private ModelFactory factory;
     private ObservableList<Cita> listaCitaObservable;
 
-    public CitaController(ModelFactory factory) {
+    public CitaController() {
         this.factory = ModelFactory.getIntance();
         this.sincronizarData();
     }
 
-    public ObservableList<Cita> getListaProductoObservable() {
+    public ObservableList<Cita> getListaCitaObservable() {
         return listaCitaObservable;
     }
 

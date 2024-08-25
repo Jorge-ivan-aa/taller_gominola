@@ -14,12 +14,12 @@ public class ClienteController {
     private ModelFactory factory;
     private ObservableList<Cliente> listaClienteObservable;
 
-    public ClienteController(ModelFactory factory) {
+    public ClienteController() {
         this.factory = ModelFactory.getIntance();
         this.sincronizarData();
     }
 
-    public ObservableList<Cliente> getListaProductoObservable() {
+    public ObservableList<Cliente> getListaClienteObservable() {
         return listaClienteObservable;
     }
 

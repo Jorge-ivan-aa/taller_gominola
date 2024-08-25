@@ -19,19 +19,20 @@ public class Cita {
         this.horas = horas;
     }
 
+    public Acompanante getAcompanante() {
+        return acompanante;
+    }
+
     public void setAcompanante(Acompanante acompanante) {
         this.acompanante = acompanante;
     }
 
-    public Acompanante getAcompanante() {
-        return acompanante;
-    }
-    public void setCliente(Cliente cliente) {
-        this.cliente = cliente;
-    }
-
     public Cliente getCliente() {
         return cliente;
+    }
+
+    public void setCliente(Cliente cliente) {
+        this.cliente = cliente;
     }
 
     public Date getFecha() {
@@ -65,5 +66,4 @@ public class Cita {
     public void setHoras(int horas) {
         this.horas = horas;
     }
-
 }
