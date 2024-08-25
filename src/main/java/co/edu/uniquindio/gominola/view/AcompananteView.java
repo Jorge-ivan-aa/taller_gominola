@@ -2,6 +2,8 @@ package co.edu.uniquindio.gominola.view;
 
 import java.net.URL;
 import java.util.ResourceBundle;
+
+import co.edu.uniquindio.gominola.controller.AcompananteController;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -13,6 +15,8 @@ import javafx.scene.control.TextField;
 import javafx.scene.layout.GridPane;
 
 public class AcompananteView {
+
+    private AcompananteController acompananteController = new AcompananteController();
 
     @FXML
     private ResourceBundle resources;

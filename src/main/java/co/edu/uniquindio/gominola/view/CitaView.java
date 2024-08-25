@@ -2,6 +2,9 @@ package co.edu.uniquindio.gominola.view;
 
 import java.net.URL;
 import java.util.ResourceBundle;
+
+import co.edu.uniquindio.gominola.model.Acompanante;
+import co.edu.uniquindio.gominola.model.Cita;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -68,10 +71,10 @@ public class CitaView {
     private TableColumn<?, ?> tblTelefonoAcompañante;
 
     @FXML
-    private TableColumn<?, ?> tblValorHoraAcompañante;
+    private TableColumn<String, Acompanante> tblValorHoraAcompañante;
 
     @FXML
-    private TableView<?> tvTablaCitas;
+    private TableView<Cita> tvTablaCitas;
 
     @FXML
     private TextField txtCantidadHorasCita;
@@ -105,6 +108,4 @@ public class CitaView {
     void eliminarCitaAction(ActionEvent event) {
 
     }
-
-
 }
