@@ -6,6 +6,7 @@ import co.edu.uniquindio.gominola.model.Cita;
 import co.edu.uniquindio.gominola.model.Cita;
 import co.edu.uniquindio.gominola.model.Cliente;
 import co.edu.uniquindio.gominola.view.CitaView;
+import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 
 import java.util.ArrayList;
@@ -18,6 +19,7 @@ public class CitaController {
 
     public CitaController() {
         this.factory = ModelFactory.getIntance();
+        this.listaCitaObservable =  FXCollections.observableArrayList();
         this.sincronizarData();
     }
 

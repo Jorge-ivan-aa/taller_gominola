@@ -17,6 +17,9 @@ public class ModelFactory {
 
     private ModelFactory() {
         gominola = new Gominola();
+        registrarAcompanantes(gominola);
+        registrarClientes(gominola);
+        registrarCitas(gominola);
     }
 
     public static ModelFactory getIntance() {
@@ -98,10 +101,11 @@ public class ModelFactory {
                 "05:00 PM", "Centro Comercial Portal del Quindío", 2
         );
 
-        Cita cita5 = new Cita(
-                listaAcompanante.get(4), listaCliente.get(4), new Date(),
-                "03:00 PM", "Museo del Oro Quimbaya", 3
-        );
+
+        gominola.addCita(cita1);
+        gominola.addCita(cita2);
+        gominola.addCita(cita3);
+        gominola.addCita(cita4);
     }
 
 }

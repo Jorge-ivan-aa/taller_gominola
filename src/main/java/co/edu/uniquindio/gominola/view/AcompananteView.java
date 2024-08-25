@@ -33,27 +33,6 @@ public class AcompananteView {
     private Button btnEliminarAcompanante;
 
     @FXML
-    private Label lbCorreo;
-
-    @FXML
-    private Label lbEdad;
-
-    @FXML
-    private Label lbNombre;
-
-    @FXML
-    private Label lbSaludo;
-
-    @FXML
-    private Label lbTalla;
-
-    @FXML
-    private Label lbTelefono;
-
-    @FXML
-    private Label lbValorHora;
-
-    @FXML
     private RadioButton rbDisponibleAcompanante;
 
     @FXML
@@ -121,7 +100,7 @@ public class AcompananteView {
 
     @FXML
     void initialize() {
-
+        initview();
     }
 
     private void initview() {

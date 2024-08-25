@@ -18,56 +18,56 @@
         <items>
           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="282.0" prefWidth="766.0">
                <children>
-                  <GridPane fx:id="gpDatosAcompañante" hgap="10.0" layoutX="-48.0" layoutY="7.0" prefHeight="219.0" prefWidth="799.0" vgap="10.0">
+                  <GridPane hgap="10.0" layoutX="8.0" layoutY="17.0" prefHeight="205.0" prefWidth="736.0" vgap="10.0">
                      <columnConstraints>
-                        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                        <ColumnConstraints halignment="LEFT" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="269.0" minWidth="10.0" prefWidth="85.0" />
+                        <ColumnConstraints halignment="LEFT" hgrow="SOMETIMES" maxWidth="353.0" minWidth="10.0" prefWidth="236.0" />
+                        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="265.0" minWidth="10.0" prefWidth="243.0" />
+                        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="238.0" minWidth="10.0" prefWidth="164.0" />
                      </columnConstraints>
                      <rowConstraints>
                         <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                         <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                         <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                         <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="22.0" minHeight="1.0" prefHeight="1.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="55.0" minHeight="10.0" prefHeight="55.0" vgrow="SOMETIMES" />
                      </rowConstraints>
                      <children>
-                        <Label fx:id="lbNombre" text="Nombre:" />
-                        <TextField fx:id="txtNombreAcompañante" prefHeight="26.0" prefWidth="210.0" GridPane.columnIndex="1" />
-                        <Label fx:id="lbTalla" text="Talla:" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
-                        <TextField fx:id="txtTallaAcompañante" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                        <Label fx:id="lbTelefono" prefWidth="58.0" text="Telefono:" GridPane.rowIndex="2" />
-                        <Label fx:id="lbValorHora" text="Valor hora:" GridPane.rowIndex="3" />
-                        <TextField fx:id="txtTelefonoAcompañante" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-                        <TextField fx:id="txtValorHoraAcompañante" GridPane.columnIndex="1" GridPane.rowIndex="3" />
-                        <Label fx:id="lbEdad" text="Edad:" GridPane.columnIndex="2" />
-                        <Label fx:id="lbCorreo" text="Correo:" GridPane.columnIndex="2" GridPane.rowIndex="1" />
-                        <Label fx:id="lbSaludo" text="Saludo:" GridPane.columnIndex="2" GridPane.rowIndex="2" />
-                        <TextField fx:id="txtEdadAcompañante" GridPane.columnIndex="3" />
-                        <TextField fx:id="txtCorreoAcompañante" GridPane.columnIndex="3" GridPane.rowIndex="1" />
-                        <TextField fx:id="txtSaludoAcompañante" GridPane.columnIndex="3" GridPane.rowIndex="2" />
-                        <RadioButton fx:id="rbDisponibleAcompañante" mnemonicParsing="false" text="Dispinible :)" GridPane.columnIndex="2" GridPane.halignment="RIGHT" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
-                        <RadioButton fx:id="rbOcupadoAcompañante" mnemonicParsing="false" text="Ocupado :(" GridPane.columnIndex="3" GridPane.rowIndex="3" />
-                        <Button fx:id="btnAgregarAcompañante" mnemonicParsing="false" onAction="#agregarAction" text="Agregar/Actualizar" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="4" />
-                        <Button fx:id="btnEliminarAcompañante" mnemonicParsing="false" onAction="#eliminarAction" text="Eliminar" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="4" />
+                        <Label text="Nombre:" />
+                        <TextField fx:id="txtNombreAcompanante" prefHeight="26.0" prefWidth="289.0" GridPane.columnIndex="1" />
+                        <Label text="Talla:        " GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+                        <TextField fx:id="txtTallaAcompanante" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <Label prefWidth="58.0" text="Telefono:" GridPane.rowIndex="2" />
+                        <Label text="Valor hora:" GridPane.rowIndex="3" />
+                        <TextField fx:id="txtTelefonoAcompanante" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                        <TextField fx:id="txtValorHoraAcompanante" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                        <Label text="Edad:" GridPane.columnIndex="2" />
+                        <Label text="Correo:" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                        <Label text="Saludo:" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                        <TextField fx:id="txtEdadAcompanante" GridPane.columnIndex="3" />
+                        <TextField fx:id="txtCorreoAcompanante" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+                        <TextField fx:id="txtSaludoAcompanante" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+                        <RadioButton fx:id="rbDisponibleAcompanante" mnemonicParsing="false" text="Dispinible :)" GridPane.columnIndex="2" GridPane.halignment="RIGHT" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
+                        <RadioButton fx:id="rbOcupadoAcompanante" mnemonicParsing="false" text="Ocupado :(" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+                        <Button fx:id="btnAgregarAcompanante" mnemonicParsing="false" onAction="#agregarAction" text="Agregar/Actualizar" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="5" />
+                        <Button fx:id="btnEliminarAcompanante" mnemonicParsing="false" onAction="#eliminarAction" text="Eliminar" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowIndex="5" />
                      </children>
                   </GridPane>
                </children>
             </AnchorPane>
           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="253.0" prefWidth="766.0">
                <children>
-                  <TableView fx:id="tvTablaAcompañante" layoutY="1.0" prefHeight="291.0" prefWidth="766.0">
+                  <TableView fx:id="tvTablaAcompanante" layoutY="1.0" prefHeight="291.0" prefWidth="766.0">
                     <columns>
-                      <TableColumn fx:id="tblNombreAcompañante" prefWidth="95.0" text="Nombre" />
-                      <TableColumn fx:id="tblEdadAcompañante" prefWidth="95.0" text="Edad" />
-                        <TableColumn fx:id="tblTallaAcompañante" prefWidth="95.0" text="Talla" />
-                        <TableColumn fx:id="tblCorreoAcompañante" prefWidth="95.0" text="Correo" />
-                        <TableColumn fx:id="tblTelefonoAcompañante" prefWidth="95.0" text="Telefono" />
-                        <TableColumn fx:id="tblSaludoAcompañante" prefWidth="95.0" text="Saludo" />
-                        <TableColumn fx:id="tblValorHoraAcompañante" prefWidth="95.0" text="Valor Hora" />
-                        <TableColumn fx:id="tblDisponibilidadAcompañante" prefWidth="100.0" text="Disponibilidad" />
+                      <TableColumn fx:id="tblNombreAcompanante" prefWidth="95.0" text="Nombre" />
+                      <TableColumn fx:id="tblEdadAcompanante" prefWidth="95.0" text="Edad" />
+                        <TableColumn fx:id="tblTallaAcompanante" prefWidth="95.0" text="Talla" />
+                        <TableColumn fx:id="tblCorreoAcompanante" prefWidth="95.0" text="Correo" />
+                        <TableColumn fx:id="tblTelefonoAcompanante" prefWidth="95.0" text="Telefono" />
+                        <TableColumn fx:id="tblSaludoAcompanante" prefWidth="95.0" text="Saludo" />
+                        <TableColumn fx:id="tblValorHoraAcompanante" prefWidth="95.0" text="Valor Hora" />
+                        <TableColumn fx:id="tblDisponibilidadAcompanante" prefWidth="100.0" text="Disponibilidad" />
                     </columns>
                   </TableView>
                </children>

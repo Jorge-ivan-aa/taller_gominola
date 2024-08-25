@@ -5,6 +5,7 @@ import co.edu.uniquindio.gominola.model.Cliente;
 import co.edu.uniquindio.gominola.model.Cliente;
 import co.edu.uniquindio.gominola.model.Cliente;
 import co.edu.uniquindio.gominola.model.Cliente;
+import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 
 import java.util.ArrayList;
@@ -17,6 +18,7 @@ public class ClienteController {
 
     public ClienteController() {
         this.factory = ModelFactory.getIntance();
+        this.listaClienteObservable =  FXCollections.observableArrayList();
         this.sincronizarData();
     }
 

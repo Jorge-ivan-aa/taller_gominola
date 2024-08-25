@@ -72,9 +72,7 @@ public class ClienteView {
 
     @FXML
     void initialize() {
-
-
-
+        initview();
     }
     private void initview() {
         initDataBinding();
