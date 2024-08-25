@@ -48,15 +48,15 @@ public class AcompananteController {
 
     public String crearAcompanante(String nombre, String edad, String talla, String correo, String telefono, String saludo, int valorHora) {
         ArrayList<Acompanante> acompanantes = factory.getGominola().getListaAcompanante();
-        for (Acompanante producto : acompanantes) {
-            if (Objects.equals(producto.getNombre(), nombre)) {
-                return "El producto ingresado ya se existe";
+        for (Acompanante acompanante : acompanantes) {
+            if (Objects.equals(acompanante.getNombre(), nombre)) {
+                return "El acompañante ingresado ya se existe";
             }
         }
         Acompanante nuevoAcompanante = new Acompanante(nombre, edad, talla, correo, telefono, saludo, valorHora);
         this.factory.getGominola().addAcompanante(nuevoAcompanante);
         this.listaAcompananteObservable.add(nuevoAcompanante);
-        return "Acompanante registrado exitosamente";
+        return "Acompañante registrado exitosamente";
     }
 
 

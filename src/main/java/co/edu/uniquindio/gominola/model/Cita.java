@@ -10,11 +10,28 @@ public class Cita {
     private String lugar;
     private int horas;
 
-    public Cita(Date fecha, String hora, String lugar, int horas) {
+    public Cita(Acompanante acompanante, Cliente cliente, Date fecha, String hora, String lugar, int horas) {
+        this.acompanante = acompanante;
+        this.cliente = cliente;
         this.fecha = fecha;
         this.hora = hora;
         this.lugar = lugar;
         this.horas = horas;
+    }
+
+    public void setAcompanante(Acompanante acompanante) {
+        this.acompanante = acompanante;
+    }
+
+    public Acompanante getAcompanante() {
+        return acompanante;
+    }
+    public void setCliente(Cliente cliente) {
+        this.cliente = cliente;
+    }
+
+    public Cliente getCliente() {
+        return cliente;
     }
 
     public Date getFecha() {
@@ -48,4 +65,5 @@ public class Cita {
     public void setHoras(int horas) {
         this.horas = horas;
     }
+
 }
