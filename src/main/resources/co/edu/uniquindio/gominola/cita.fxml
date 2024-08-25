@@ -81,7 +81,7 @@
                   </AnchorPane>
                   <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="253.0" prefWidth="766.0">
                      <children>
-                        <TableView fx:id="tvTablaCitas" layoutX="-2.0" layoutY="-4.0" prefHeight="291.0" prefWidth="775.0">
+                        <TableView fx:id="tvTablaCitas" layoutX="-2.0" layoutY="-4.0" prefHeight="291.0" prefWidth="775.0" style="-fx-background-color: #FCEFEF;">
                            <columns>
                               <TableColumn fx:id="tblNombreClienteCita" prefWidth="125.0" text="Cliente" />
                               <TableColumn fx:id="tblNombreAcompananteCita" prefWidth="125.0" text="Acompañante" />
