@@ -62,4 +62,17 @@ public class CitaController {
         return "Cita registrado exitosamente";
     }
 
+    public void actualizarCita(Acompanante acompanante, Cliente cliente, Date fecha, String hora, String lugar, int horas){
+        ArrayList<Cita> citas = factory.getGominola().getListaCita();
+        for (int i = 0; i < citas.size(); i++){
+            if (Objects.equals(citas.get(i).getAcompanante().getNombre(), acompanante.getNombre())){
+                Cita nuevoAcompanante = new Cita(acompanante, cliente, fecha, hora, lugar, horas);
+                citas.remove(citas.get(i));
+                citas.add(nuevoAcompanante);
+                this.listaCitaObservable.remove(citas.get(i));
+                this.listaCitaObservable.add(nuevoAcompanante);
+            }
+        }
+    }
+
 }

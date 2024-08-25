@@ -1,7 +1,8 @@
 package co.edu.uniquindio.gominola.controller;
 
 import co.edu.uniquindio.gominola.factory.ModelFactory;
-import co.edu.uniquindio.gominola.model.Acompanante;
+import co.edu.uniquindio.gominola.model.Cliente;
+import co.edu.uniquindio.gominola.model.Cliente;
 import co.edu.uniquindio.gominola.model.Cliente;
 import co.edu.uniquindio.gominola.model.Cliente;
 import javafx.collections.ObservableList;
@@ -59,4 +60,17 @@ public class ClienteController {
         this.listaClienteObservable.add(nuevoCliente);
         return "Cliente registrado exitosamente";
     }
+    public void actualizarCliente(String nombre, String correo, String telefono){
+        ArrayList<Cliente> Clientes = factory.getGominola().getListaCliente();
+        for (int i = 0; i < Clientes.size(); i++){
+            if (Objects.equals(Clientes.get(i).getNombre(), nombre)){
+                Cliente nuevoCliente = new Cliente(nombre, correo, telefono);
+                Clientes.remove(Clientes.get(i));
+                Clientes.add(nuevoCliente);
+                this.listaClienteObservable.remove(Clientes.get(i));
+                this.listaClienteObservable.add(nuevoCliente);
+            }
+        }
+    }
+    
 }
