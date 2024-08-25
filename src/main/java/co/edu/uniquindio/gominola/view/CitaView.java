@@ -2,6 +2,8 @@ package co.edu.uniquindio.gominola.view;
 
 import java.net.URL;
 import java.util.ResourceBundle;
+
+import co.edu.uniquindio.gominola.model.Cita;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -59,10 +61,10 @@ public class CitaView {
     private TableColumn<String, Cita> tblLugarCita;
 
     @FXML
-    private TableColumn<String, Acompanante> tblNombreAcompananteCita;
+    private TableColumn<String, Cita> tblNombreAcompananteCita;
 
     @FXML
-    private TableColumn<String, Cliente> tblNombreClienteCita;
+    private TableColumn<String, Cita> tblNombreClienteCita;
 
     @FXML
     private TableView<Cita> tvTablaCitas;

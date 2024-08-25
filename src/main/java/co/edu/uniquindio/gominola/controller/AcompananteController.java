@@ -59,6 +59,7 @@ public class AcompananteController {
         return "Acompañante registrado exitosamente";
     }
 
+
     public void actualizarAcompanante(String nombre, String edad, String talla, String correo, String telefono, String saludo, int valorHora){
         ArrayList<Acompanante> acompanantes = factory.getGominola().getListaAcompanante();
         for (int i = 0; i < acompanantes.size(); i++){
@@ -71,6 +72,5 @@ public class AcompananteController {
             }
         }
     }
-
 
 }
