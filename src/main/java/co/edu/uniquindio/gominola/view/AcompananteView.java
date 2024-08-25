@@ -5,6 +5,7 @@ import java.util.ResourceBundle;
 
 import co.edu.uniquindio.gominola.controller.AcompananteController;
 import co.edu.uniquindio.gominola.model.Acompanante;
+import javafx.beans.property.SimpleStringProperty;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -123,4 +124,48 @@ public class AcompananteView {
 
     }
 
+    private void initview() {
+        initDataBinding();
+        tvTablaAcompanante.getItems().clear();
+        tvTablaAcompanante.setItems(acompananteController.getListaAcompananteObservable());
+        listenerSelectionAcompanante();
+    }
+
+    private void initDataBinding() {
+        tblCorreoAcompanante.setCellValueFactory(cellData -> new SimpleStringProperty(cellData.getValue().getCorreo()));
+        tblDisponibilidadAcompanante.setCellValueFactory(cellData -> new SimpleStringProperty(cellData.getValue().getDisponibilidad().name().toLowerCase()));
+        tblEdadAcompanante.setCellValueFactory(cellData -> new SimpleStringProperty(cellData.getValue().getEdad()));
+        tblNombreAcompanante.setCellValueFactory(cellData -> new SimpleStringProperty(cellData.getValue().getNombre()));
+        tblSaludoAcompanante.setCellValueFactory(cellData -> new SimpleStringProperty(cellData.getValue().getSaludo()));
+        tblTallaAcompanante.setCellValueFactory(cellData -> new SimpleStringProperty(cellData.getValue().getTalla()));
+        tblTelefonoAcompanante.setCellValueFactory(cellData -> new SimpleStringProperty(cellData.getValue().getTelefono()));
+        tblValorHoraAcompanante.setCellValueFactory(cellData -> new SimpleStringProperty(Integer.toString(cellData.getValue().getValorHora())));
+
+    }
+    
+    private void listenerSelectionAcompanante() {
+        tvTablaAcompanante.getSelectionModel().selectedItemProperty().addListener((obs, oldSelection, newSelection) -> {
+            this.mostrarInformacionAcompanante((Acompanante) newSelection);
+        });
+    }
+
+    private void mostrarInformacionAcompanante(Acompanante seleccionado) {
+        if (seleccionado != null) {
+            txtCorreoAcompanante.setText(seleccionado.getCorreo());
+            txtEdadAcompanante.setText(String.valueOf(seleccionado.getEdad()));
+            txtNombreAcompanante.setText(seleccionado.getNombre());
+            txtSaludoAcompanante.setText(String.valueOf(seleccionado.getSaludo()));
+            txtTallaAcompanante.setText(seleccionado.getTalla());
+            txtTelefonoAcompanante.setText(String.valueOf(seleccionado.getTelefono()));
+            txtValorHoraAcompanante.setText(Integer.toString(seleccionado.getValorHora()));
+
+            if (seleccionado.getDisponibilidad().name().equals("DISPONIBLE")) {
+                rbDisponibleAcompanante.setSelected(true);
+                rbOcupadoAcompanante.setSelected(false);
+            } else {
+                rbDisponibleAcompanante.setSelected(false);
+                rbOcupadoAcompanante.setSelected(true);
+            }
+        }
+    }
 }

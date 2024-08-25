@@ -82,4 +82,12 @@ public class Acompanante {
     public void setNoDisponibilidad() {
         this.disponibilidad = Disponibilidad.OCUPADX;
     }
+
+    public void setDisponibilidad() {
+        this.disponibilidad = Disponibilidad.DIPONIBLE;
+    }
+
+    public Disponibilidad getDisponibilidad() {
+        return disponibilidad;
+    }
 }

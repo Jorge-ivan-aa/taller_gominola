@@ -59,5 +59,4 @@ public class AcompananteController {
         return "Acompañante registrado exitosamente";
     }
 
-
 }
