@@ -50,25 +50,25 @@ public class CitaView {
     private Label lbNombreClienteCita;
 
     @FXML
-    private TableColumn<?, ?> tblCorreoAcompañante;
+    private TableColumn<String, ?> tblCorreoAcompañante;
 
     @FXML
-    private TableColumn<?, ?> tblDisponibilidadAcompañante;
+    private TableColumn<String, ?> tblDisponibilidadAcompañante;
 
     @FXML
-    private TableColumn<?, ?> tblEdadAcompañante;
+    private TableColumn<String, ?> tblEdadAcompañante;
 
     @FXML
-    private TableColumn<?, ?> tblNombreAcompañante;
+    private TableColumn<String, ?> tblNombreAcompañante;
 
     @FXML
-    private TableColumn<?, ?> tblSaludoAcompañante;
+    private TableColumn<String, ?> tblSaludoAcompañante;
 
     @FXML
-    private TableColumn<?, ?> tblTallaAcompañante;
+    private TableColumn<String, ?> tblTallaAcompañante;
 
     @FXML
-    private TableColumn<?, ?> tblTelefonoAcompañante;
+    private TableColumn<String, ?> tblTelefonoAcompañante;
 
     @FXML
     private TableColumn<String, Acompanante> tblValorHoraAcompañante;

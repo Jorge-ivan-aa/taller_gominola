@@ -4,6 +4,7 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 import co.edu.uniquindio.gominola.controller.AcompananteController;
+import co.edu.uniquindio.gominola.model.Acompanante;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -58,31 +59,31 @@ public class AcompananteView {
     private RadioButton rbOcupadoAcompañante;
 
     @FXML
-    private TableColumn<?, ?> tblCorreoAcompañante;
+    private TableColumn<Acompanante, String> tblCorreoAcompañante;
 
     @FXML
-    private TableColumn<?, ?> tblDisponibilidadAcompañante;
+    private TableColumn<Acompanante, String> tblDisponibilidadAcompañante;
 
     @FXML
-    private TableColumn<?, ?> tblEdadAcompañante;
+    private TableColumn<Acompanante, String> tblEdadAcompañante;
 
     @FXML
-    private TableColumn<?, ?> tblNombreAcompañante;
+    private TableColumn<Acompanante, String> tblNombreAcompañante;
 
     @FXML
-    private TableColumn<?, ?> tblSaludoAcompañante;
+    private TableColumn<Acompanante, String> tblSaludoAcompañante;
 
     @FXML
-    private TableColumn<?, ?> tblTallaAcompañante;
+    private TableColumn<Acompanante, String> tblTallaAcompañante;
 
     @FXML
-    private TableColumn<?, ?> tblTelefonoAcompañante;
+    private TableColumn<Acompanante, String> tblTelefonoAcompañante;
 
     @FXML
-    private TableColumn<?, ?> tblValorHoraAcompañante;
+    private TableColumn<Acompanante, String> tblValorHoraAcompañante;
 
     @FXML
-    private TableView<?> tvTablaAcompañante;
+    private TableView<Acompanante> tvTablaAcompañante;
 
     @FXML
     private TextField txtCorreoAcompañante;
