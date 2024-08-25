@@ -11,16 +11,17 @@
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="332.0" prefWidth="778.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="co.edu.uniquindio.gominola.view.ClienteView">
+<AnchorPane prefHeight="520.0" prefWidth="754.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="co.edu.uniquindio.gominola.view.ClienteView">
    <children>
-      <Pane prefHeight="326.0" prefWidth="777.0">
+      <Pane prefHeight="298.0" prefWidth="754.0">
          <children>
-            <SplitPane dividerPositions="0.5" layoutX="16.0" layoutY="15.0" prefHeight="296.0" prefWidth="745.0">
+            <SplitPane dividerPositions="0.5" layoutX="-13.0" layoutY="-1.0" prefHeight="300.0" prefWidth="754.0">
                <items>
                   <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="225.0" prefWidth="769.0">
                      <children>
-                        <GridPane hgap="30.0" layoutX="8.0" layoutY="-11.0" prefHeight="252.0" prefWidth="286.0">
+                        <GridPane hgap="30.0" layoutX="49.0" layoutY="14.0" prefHeight="252.0" prefWidth="286.0">
                            <columnConstraints>
                               <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
                            </columnConstraints>
@@ -34,21 +35,36 @@
                               <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                            </rowConstraints>
                            <children>
-                              <Label fx:id="lbNombre1" text="Nombre:" GridPane.halignment="CENTER" GridPane.valignment="BOTTOM" />
+                              <Label fx:id="lbNombre1" text="Nombre:" GridPane.halignment="CENTER" GridPane.valignment="BOTTOM">
+                                 <font>
+                                    <Font name="Bell MT" size="14.0" />
+                                 </font></Label>
                               <TextField fx:id="txtNombreCliente1" prefHeight="26.0" prefWidth="210.0" GridPane.rowIndex="1" />
-                              <Label fx:id="lbTelefono1" prefWidth="58.0" text="Telefono:" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="BOTTOM" />
+                              <Label fx:id="lbTelefono1" prefWidth="58.0" text="Telefono:" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="BOTTOM">
+                                 <font>
+                                    <Font name="Bell MT" size="14.0" />
+                                 </font></Label>
                               <TextField fx:id="txtTelefonoCliente1" GridPane.rowIndex="3" />
-                              <Label fx:id="lbCorreo1" text="Correo:" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="BOTTOM" />
+                              <Label fx:id="lbCorreo1" text="Correo:" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="BOTTOM">
+                                 <font>
+                                    <Font name="Bell MT" size="14.0" />
+                                 </font></Label>
                               <TextField fx:id="txtCorreoCliente1" GridPane.rowIndex="5" />
-                              <Button fx:id="btnAgregarCliente1" mnemonicParsing="false" onAction="#agregarAction" text="Agregar/Actualizar" GridPane.halignment="LEFT" GridPane.rowIndex="6" />
-                              <Button fx:id="btnEliminarCliente1" mnemonicParsing="false" onAction="#eliminarAction" text="Eliminar" GridPane.halignment="RIGHT" GridPane.rowIndex="6" />
+                              <Button fx:id="btnAgregarCliente1" mnemonicParsing="false" onAction="#agregarAction" text="Agregar/Actualizar" GridPane.halignment="LEFT" GridPane.rowIndex="6">
+                                 <font>
+                                    <Font name="Bell MT" size="14.0" />
+                                 </font></Button>
+                              <Button fx:id="btnEliminarCliente1" mnemonicParsing="false" onAction="#eliminarAction" text="Eliminar" GridPane.halignment="RIGHT" GridPane.rowIndex="6">
+                                 <font>
+                                    <Font name="Bell MT" size="14.0" />
+                                 </font></Button>
                            </children>
                         </GridPane>
                      </children>
                   </AnchorPane>
-                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="253.0" prefWidth="766.0">
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="294.0" prefWidth="378.0">
                      <children>
-                        <TableView fx:id="tvTablaCliente" layoutY="1.0" prefHeight="294.0" prefWidth="370.0">
+                        <TableView fx:id="tvTablaCliente" layoutY="1.0" prefHeight="300.0" prefWidth="380.0">
                            <columns>
                               <TableColumn fx:id="tblNombreCliente" prefWidth="130.0" text="Nombre" />
                               <TableColumn fx:id="tblTelefonoCliente" prefWidth="130.0" text="Telefono" />
