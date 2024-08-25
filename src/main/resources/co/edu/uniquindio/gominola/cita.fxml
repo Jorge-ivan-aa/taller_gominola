@@ -20,7 +20,7 @@
          <children>
             <SplitPane dividerPositions="0.4725705329153605" layoutX="1.0" layoutY="-1.0" orientation="VERTICAL" prefHeight="542.0" prefWidth="756.0">
                <items>
-                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="282.0" prefWidth="766.0">
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="282.0" prefWidth="766.0" style="-fx-background-color: #06A77D;">
                      <children>
                         <GridPane fx:id="gpDatosAcompañante" hgap="10.0" layoutX="-28.0" layoutY="23.0" prefHeight="189.0" prefWidth="768.0" vgap="10.0">
                            <columnConstraints>
@@ -41,17 +41,17 @@
                                  <font>
                                     <Font name="Bell MT" size="14.0" />
                                  </font></Label>
-                              <TextField fx:id="txtNombreClienteCita" prefHeight="26.0" prefWidth="210.0" GridPane.columnIndex="1" />
+                              <TextField fx:id="txtNombreClienteCita" prefHeight="26.0" prefWidth="210.0" style="-fx-background-color: #FCEFEF;" GridPane.columnIndex="1" />
                               <Label fx:id="lbFechaCita" text="Fecha Cita:" GridPane.halignment="CENTER" GridPane.rowIndex="1">
                                  <font>
                                     <Font name="Bell MT" size="14.0" />
                                  </font></Label>
-                              <TextField fx:id="txtFechaCita" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                              <TextField fx:id="txtFechaCita" style="-fx-background-color: #FCEFEF;" GridPane.columnIndex="1" GridPane.rowIndex="1" />
                               <Label fx:id="lbLugarEncuentro" prefHeight="18.0" prefWidth="105.0" text="Lugar Encuentro:" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
                                  <font>
                                     <Font name="Bell MT" size="14.0" />
                                  </font></Label>
-                              <TextField fx:id="txtLugarCita" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                              <TextField fx:id="txtLugarCita" style="-fx-background-color: #FCEFEF;" GridPane.columnIndex="1" GridPane.rowIndex="2" />
                               <Label fx:id="lbNombreAcompañanteCita" text="Nombre Acompañante: " GridPane.columnIndex="2">
                                  <font>
                                     <Font name="Bell MT" size="14.0" />
@@ -64,16 +64,16 @@
                                  <font>
                                     <Font name="Bell MT" size="14.0" />
                                  </font></Label>
-                              <TextField fx:id="txtNombreAcompananteCita" GridPane.columnIndex="3" />
-                              <TextField fx:id="txtHoraCita" GridPane.columnIndex="3" GridPane.rowIndex="1" />
-                              <TextField fx:id="txtCantidadHorasCita" GridPane.columnIndex="3" GridPane.rowIndex="2" />
-                              <Button fx:id="btnAgregarCita" mnemonicParsing="false" onAction="#agregarCitaAction" text="Agendar/Actualizar Cita" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="4" GridPane.valignment="BOTTOM">
+                              <TextField fx:id="txtNombreAcompananteCita" style="-fx-background-color: #FCEFEF;" GridPane.columnIndex="3" />
+                              <TextField fx:id="txtHoraCita" style="-fx-background-color: #FCEFEF;" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+                              <TextField fx:id="txtCantidadHorasCita" style="-fx-background-color: #FCEFEF;" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+                              <Button fx:id="btnAgregarCita" mnemonicParsing="false" onAction="#agregarCitaAction" style="-fx-background-color: #484A47;" text="Agendar/Actualizar Cita" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="4" GridPane.valignment="BOTTOM">
                                  <font>
-                                    <Font name="Bell MT" size="13.0" />
+                                    <Font name="Bell MT" size="14.0" />
                                  </font></Button>
-                              <Button fx:id="btnEliminarCita" mnemonicParsing="false" onAction="#eliminarCitaAction" text="Cancelar cita" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="BOTTOM">
+                              <Button fx:id="btnEliminarCita" mnemonicParsing="false" onAction="#eliminarCitaAction" style="-fx-background-color: #484A47;" text="Cancelar cita" textFill="WHITE" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="BOTTOM">
                                  <font>
-                                    <Font name="Bell MT" size="13.0" />
+                                    <Font name="Bell MT" size="14.0" />
                                  </font></Button>
                            </children>
                         </GridPane>

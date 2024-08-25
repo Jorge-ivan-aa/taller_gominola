@@ -17,7 +17,7 @@
    <children>
       <SplitPane dividerPositions="0.4556709265175719" orientation="VERTICAL" prefHeight="502.0" prefWidth="767.0">
         <items>
-          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="282.0" prefWidth="766.0">
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="282.0" prefWidth="766.0" style="-fx-background-color: #06A77D;">
                <children>
                   <GridPane hgap="10.0" layoutY="20.0" prefHeight="205.0" prefWidth="736.0" vgap="10.0">
                      <columnConstraints>
@@ -39,12 +39,12 @@
                            <font>
                               <Font name="Bell MT" size="14.0" />
                            </font></Label>
-                        <TextField fx:id="txtNombreAcompanante" prefHeight="26.0" prefWidth="289.0" GridPane.columnIndex="1" />
+                        <TextField fx:id="txtNombreAcompanante" prefHeight="26.0" prefWidth="289.0" style="-fx-background-color: #FCEFEF;" GridPane.columnIndex="1" />
                         <Label text="Talla:        " GridPane.rowIndex="1">
                            <font>
                               <Font name="Bell MT" size="14.0" />
                            </font></Label>
-                        <TextField fx:id="txtTallaAcompanante" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <TextField fx:id="txtTallaAcompanante" style="-fx-background-color: #FCEFEF;" GridPane.columnIndex="1" GridPane.rowIndex="1" />
                         <Label prefWidth="58.0" text="Telefono:" GridPane.rowIndex="2">
                            <font>
                               <Font name="Bell MT" size="14.0" />
@@ -53,8 +53,8 @@
                            <font>
                               <Font name="Bell MT" size="14.0" />
                            </font></Label>
-                        <TextField fx:id="txtTelefonoAcompanante" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-                        <TextField fx:id="txtValorHoraAcompanante" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                        <TextField fx:id="txtTelefonoAcompanante" style="-fx-background-color: #FCEFEF;" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                        <TextField fx:id="txtValorHoraAcompanante" style="-fx-background-color: #FCEFEF;" GridPane.columnIndex="1" GridPane.rowIndex="3" />
                         <Label text="Edad:" GridPane.columnIndex="2" GridPane.halignment="CENTER">
                            <font>
                               <Font name="Bell MT" size="14.0" />
@@ -67,9 +67,9 @@
                            <font>
                               <Font name="Bell MT" size="14.0" />
                            </font></Label>
-                        <TextField fx:id="txtEdadAcompanante" GridPane.columnIndex="3" GridPane.halignment="LEFT" />
-                        <TextField fx:id="txtCorreoAcompanante" GridPane.columnIndex="3" GridPane.rowIndex="1" />
-                        <TextField fx:id="txtSaludoAcompanante" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+                        <TextField fx:id="txtEdadAcompanante" style="-fx-background-color: #FCEFEF;" GridPane.columnIndex="3" GridPane.halignment="LEFT" />
+                        <TextField fx:id="txtCorreoAcompanante" style="-fx-background-color: #FCEFEF;" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+                        <TextField fx:id="txtSaludoAcompanante" style="-fx-background-color: #FCEFEF;" GridPane.columnIndex="3" GridPane.rowIndex="2" />
                         <RadioButton fx:id="rbDisponibleAcompanante" mnemonicParsing="false" onAction="#disponibilidadAcomp" text="Dispinible :)" GridPane.columnIndex="2" GridPane.halignment="RIGHT" GridPane.rowIndex="3" GridPane.valignment="CENTER">
                            <font>
                               <Font name="Bell MT" size="14.0" />
@@ -78,11 +78,11 @@
                            <font>
                               <Font name="Bell MT" size="14.0" />
                            </font></RadioButton>
-                        <Button fx:id="btnAgregarAcompanante" mnemonicParsing="false" onAction="#agregarAction" text="Agregar/Actualizar" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="5" GridPane.valignment="CENTER">
+                        <Button fx:id="btnAgregarAcompanante" mnemonicParsing="false" onAction="#agregarAction" style="-fx-background-color: #484A47;" text="Agregar/Actualizar" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="5" GridPane.valignment="CENTER">
                            <font>
                               <Font name="Bell MT" size="14.0" />
                            </font></Button>
-                        <Button fx:id="btnEliminarAcompanante" mnemonicParsing="false" onAction="#eliminarAction" text="Eliminar" GridPane.columnIndex="2" GridPane.halignment="RIGHT" GridPane.rowIndex="5" GridPane.valignment="CENTER">
+                        <Button fx:id="btnEliminarAcompanante" mnemonicParsing="false" onAction="#eliminarAction" style="-fx-background-color: #484A47;" text="Eliminar" textFill="WHITE" GridPane.columnIndex="2" GridPane.halignment="RIGHT" GridPane.rowIndex="5" GridPane.valignment="CENTER">
                            <font>
                               <Font name="Bell MT" size="14.0" />
                            </font></Button>
@@ -92,7 +92,7 @@
             </AnchorPane>
           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="253.0" prefWidth="766.0">
                <children>
-                  <TableView fx:id="tvTablaAcompanante" layoutY="1.0" prefHeight="291.0" prefWidth="766.0">
+                  <TableView fx:id="tvTablaAcompanante" layoutY="1.0" prefHeight="291.0" prefWidth="766.0" style="-fx-background-color: #FCEFEF;">
                     <columns>
                       <TableColumn fx:id="tblNombreAcompanante" prefWidth="95.0" text="Nombre" />
                       <TableColumn fx:id="tblEdadAcompanante" prefWidth="95.0" text="Edad" />
