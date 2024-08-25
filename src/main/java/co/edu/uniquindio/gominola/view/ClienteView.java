@@ -43,7 +43,7 @@ public class ClienteView {
     private TableColumn<?, ?> tblTelefonoCliente;
 
     @FXML
-    private TableView<?> tvTablaCliente;
+    private TableView<Cliente> tvTablaCliente;
 
     @FXML
     private TextField txtCorreoCliente;
