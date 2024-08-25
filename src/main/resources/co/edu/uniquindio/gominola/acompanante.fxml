@@ -48,8 +48,8 @@
                         <TextField fx:id="txtEdadAcompanante" GridPane.columnIndex="3" />
                         <TextField fx:id="txtCorreoAcompanante" GridPane.columnIndex="3" GridPane.rowIndex="1" />
                         <TextField fx:id="txtSaludoAcompanante" GridPane.columnIndex="3" GridPane.rowIndex="2" />
-                        <RadioButton fx:id="rbDisponibleAcompanante" mnemonicParsing="false" text="Dispinible :)" GridPane.columnIndex="2" GridPane.halignment="RIGHT" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
-                        <RadioButton fx:id="rbOcupadoAcompanante" mnemonicParsing="false" text="Ocupado :(" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+                        <RadioButton fx:id="rbDisponibleAcompanante" mnemonicParsing="false" onAction="#disponibilidadAcomp" text="Dispinible :)" GridPane.columnIndex="2" GridPane.halignment="RIGHT" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
+                        <RadioButton fx:id="rbOcupadoAcompanante" mnemonicParsing="false" onAction="#disponibilidadAcomp" text="Ocupado :(" GridPane.columnIndex="3" GridPane.rowIndex="3" />
                         <Button fx:id="btnAgregarAcompanante" mnemonicParsing="false" onAction="#agregarAction" text="Agregar/Actualizar" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="5" />
                         <Button fx:id="btnEliminarAcompanante" mnemonicParsing="false" onAction="#eliminarAction" text="Eliminar" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowIndex="5" />
                      </children>

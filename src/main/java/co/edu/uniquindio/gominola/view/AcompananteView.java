@@ -163,4 +163,7 @@ public class AcompananteView {
             }
         }
     }
+
+    public void disponibilidadAcomp(ActionEvent actionEvent) {
+    }
 }
