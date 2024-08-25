@@ -34,16 +34,16 @@ public class ClienteView {
     private Label lbTelefono;
 
     @FXML
-    private TableColumn<?, ?> tblCorreoCliente;
+    private TableColumn<Cliente, String> tblCorreoCliente;
 
     @FXML
-    private TableColumn<?, ?> tblNombreCliente;
+    private TableColumn<Cliente, String> tblNombreCliente;
 
     @FXML
-    private TableColumn<?, ?> tblTelefonoCliente;
+    private TableColumn<Cliente, String> tblTelefonoCliente;
 
     @FXML
-    private TableView<?> tvTablaCliente;
+    private TableView<Cliente> tvTablaCliente;
 
     @FXML
     private TextField txtCorreoCliente;

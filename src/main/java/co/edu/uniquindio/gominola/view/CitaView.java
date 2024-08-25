@@ -29,7 +29,7 @@ public class CitaView {
     private Button btnEliminarCita;
 
     @FXML
-    private GridPane gpDatosAcompañante;
+    private GridPane gpDatosAcompanante;
 
     @FXML
     private Label lbFechaCita;
@@ -44,12 +44,33 @@ public class CitaView {
     private Label lbLugarEncuentro;
 
     @FXML
-    private Label lbNombreAcompañanteCita;
+    private Label lbNombreAcompananteCita;
 
     @FXML
     private Label lbNombreClienteCita;
 
     @FXML
+
+    private TableColumn<String, ?> tblCorreoAcompanante;
+
+    @FXML
+    private TableColumn<String, ?> tblDisponibilidadAcompanante;
+
+    @FXML
+    private TableColumn<String, ?> tblEdadAcompanante;
+
+    @FXML
+    private TableColumn<String, ?> tblNombreAcompanante;
+
+    @FXML
+    private TableColumn<String, ?> tblSaludoAcompanante;
+
+    @FXML
+    private TableColumn<String, ?> tblTallaAcompanante;
+
+    @FXML
+    private TableColumn<String, ?> tblTelefonoAcompanante;
+
     private TableColumn<String, Acompanante> tblCorreoAcompañante;
 
     @FXML
@@ -71,7 +92,7 @@ public class CitaView {
     private TableColumn<String, Acompanante> tblTelefonoAcompañante;
 
     @FXML
-    private TableColumn<String, Acompanante> tblValorHoraAcompañante;
+    private TableColumn<String, Acompanante> tblValorHoraAcompanante;
 
     @FXML
     private TableView<Cita> tvTablaCitas;
@@ -89,7 +110,7 @@ public class CitaView {
     private TextField txtLugarCita;
 
     @FXML
-    private TextField txtNombreAcompañanteCita;
+    private TextField txtNombreAcompananteCita;
 
     @FXML
     private TextField txtNombreClienteCita;
