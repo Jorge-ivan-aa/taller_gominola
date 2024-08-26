@@ -13,7 +13,7 @@ import javafx.scene.layout.GridPane;
 
 public class AcompananteView {
 
-    private AcompananteController acompananteController = new AcompananteController();
+    private final AcompananteController acompananteController = new AcompananteController();
 
     @FXML
     private ResourceBundle resources;
@@ -80,8 +80,7 @@ public class AcompananteView {
 
     @FXML
     private TextField txtValorHoraAcompanante;
-    @FXML
-    private GridPane gpDatosAcompanante;
+
 
     @FXML
     void agregarAcompananteAction(ActionEvent event) {
@@ -100,6 +99,15 @@ public class AcompananteView {
             Tools.mostrarMensaje("Error", null, "Hay campos vacíos", Alert.AlertType.ERROR);
 
         }
+
+
+        Tools.limpiarCampos(txtCorreoAcompanante,
+                txtEdadAcompanante,
+                txtNombreAcompanante,
+                txtSaludoAcompanante,
+                txtTallaAcompanante,
+                txtTelefonoAcompanante,
+                txtValorHoraAcompanante);
     }
 
     @FXML
@@ -112,11 +120,40 @@ public class AcompananteView {
         } else {
             Tools.mostrarMensaje("Error", null, "Hay campos vacíos", Alert.AlertType.ERROR);
         }
+
+        Tools.limpiarCampos(txtCorreoAcompanante,
+                txtEdadAcompanante,
+                txtNombreAcompanante,
+                txtSaludoAcompanante,
+                txtTallaAcompanante,
+                txtTelefonoAcompanante,
+                txtValorHoraAcompanante);
     }
 
     @FXML
     void actualizarAcompananteAction(ActionEvent event) {
+        String correo = txtCorreoAcompanante.getText();
+        String edad = txtEdadAcompanante.getText();
+        String nombre = txtNombreAcompanante.getText();
+        String saludo = txtSaludoAcompanante.getText();
+        String talla = txtTallaAcompanante.getText();
+        String telefono = txtTelefonoAcompanante.getText();
+        String valorHora = txtValorHoraAcompanante.getText();
 
+        if (!Tools.hayCamposVacios(correo, edad, nombre, saludo, talla, telefono, valorHora)) {
+            String resultado = acompananteController.actualizarAcompanante(nombre, edad, talla, correo, telefono, saludo, Integer.parseInt(valorHora));
+            Tools.mostrarMensaje("Información", null, resultado, Alert.AlertType.INFORMATION);
+        } else {
+            Tools.mostrarMensaje("Error", null, "Hay campos vacíos", Alert.AlertType.ERROR);
+        }
+
+        Tools.limpiarCampos(txtCorreoAcompanante,
+                            txtEdadAcompanante,
+                            txtNombreAcompanante,
+                            txtSaludoAcompanante,
+                            txtTallaAcompanante,
+                            txtTelefonoAcompanante,
+                            txtValorHoraAcompanante);
     }
 
     @FXML
@@ -170,5 +207,6 @@ public class AcompananteView {
     }
 
     public void disponibilidadAcomp(ActionEvent actionEvent) {
+
     }
 }

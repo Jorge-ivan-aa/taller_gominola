@@ -8,36 +8,17 @@ import co.edu.uniquindio.gominola.model.Cliente;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.control.Button;
-import javafx.scene.control.Label;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 
 public class ClienteView {
 
-    private ClienteController clienteController = new ClienteController();
+    private final ClienteController clienteController = new ClienteController();
 
     @FXML
     private ResourceBundle resources;
 
     @FXML
     private URL location;
-
-    @FXML
-    private Button btnAgregarCliente;
-
-    @FXML
-    private Button btnEliminarCliente;
-
-    @FXML
-    private Label lbCorreo;
-
-    @FXML
-    private Label lbNombre;
-
-    @FXML
-    private Label lbTelefono;
 
     @FXML
     private TableColumn<Cliente, String> tblCorreoCliente;
@@ -61,13 +42,57 @@ public class ClienteView {
     private TextField txtTelefonoCliente;
 
     @FXML
-    void agregarAction(ActionEvent event) {
+    void agregarClienteAction(ActionEvent event) {
+        String correo = txtCorreoCliente.getText();
+        String nombre = txtNombreCliente.getText();
+        String telefono = txtTelefonoCliente.getText();
 
+
+        if (!Tools.hayCamposVacios(correo, nombre, telefono)) {
+            String resultado = clienteController.crearCliente(nombre, correo, telefono);
+            Tools.mostrarMensaje("Información", null, resultado, Alert.AlertType.INFORMATION);
+        } else {
+            Tools.mostrarMensaje("Error", null, "Hay campos vacíos", Alert.AlertType.ERROR);
+
+        }
+
+        Tools.limpiarCampos(txtCorreoCliente,
+                            txtNombreCliente,
+                            txtTelefonoCliente);
     }
 
     @FXML
-    void eliminarAction(ActionEvent event) {
+    void actualizarClienteAction(ActionEvent event) {
+        String correo = txtCorreoCliente.getText();
+        String nombre = txtNombreCliente.getText();
+        String telefono = txtTelefonoCliente.getText();
 
+        if (!Tools.hayCamposVacios(correo, nombre, telefono)) {
+            String resultado = clienteController.actualizarCliente(nombre, correo, telefono);
+            Tools.mostrarMensaje("Información", null, resultado, Alert.AlertType.INFORMATION);
+        } else {
+            Tools.mostrarMensaje("Error", null, "Hay campos vacíos", Alert.AlertType.ERROR);
+        }
+
+        Tools.limpiarCampos(txtCorreoCliente,
+                txtNombreCliente,
+                txtTelefonoCliente);
+    }
+
+    @FXML
+    void eliminarClienteAction(ActionEvent event) {
+        String nombre = txtNombreCliente.getText();
+
+        if (!Tools.hayCamposVacios(nombre)) {
+            String resultado = clienteController.eliminarCliente(nombre);
+            Tools.mostrarMensaje("Información", null, resultado, Alert.AlertType.INFORMATION);
+        } else {
+            Tools.mostrarMensaje("Error", null, "Hay campos vacíos", Alert.AlertType.ERROR);
+        }
+
+        Tools.limpiarCampos(txtCorreoCliente,
+                txtNombreCliente,
+                txtTelefonoCliente);
     }
 
     @FXML

@@ -29,15 +29,15 @@ public class CitaController {
         this.listaCitaObservable.addAll(this.factory.getGominola().getListaCita());
     }
 
-    public String eliminarCita(String nombre) {
+    public String eliminarCita(String nombreAcompanante) {
 
-        if (this.consultarCita(nombre) == null) {
-            return "La cita ingresada no existe";
+        if (this.consultarCita(nombreAcompanante) == null) {
+            return "La cita consultada no existe";
         } else {
             int index = -1;
             ArrayList<Cita> Citas = factory.getGominola().getListaCita();
             for (int i = 0; i < Citas.size(); i++) {
-                if (Objects.equals(Citas.get(i).getAcompanante().getNombre(), nombre)) {
+                if (Objects.equals(Citas.get(i).getAcompanante().getNombre(), nombreAcompanante)) {
                     index = i;
                 }
             }
@@ -47,7 +47,7 @@ public class CitaController {
                 Citas.remove(Citas.get(index));
             }
 
-            return "La cita fue eliminado correctamente";
+            return "La cita fue eliminada correctamente";
         }
     }
 
@@ -65,12 +65,12 @@ public class CitaController {
         ArrayList<Cita> citas = factory.getGominola().getListaCita();
 
         if (this.consultarCita(acompanante.getNombre()) != null) {
-            return "La cita ingresada ya existe";
+            return "La cita consultada ya existe";
         } else {
             Cita nuevoCita = new Cita(acompanante, cliente, fecha, hora, lugar, horas);
             this.factory.getGominola().addCita(nuevoCita);
             this.listaCitaObservable.add(nuevoCita);
-            return "Cita registrado exitosamente";
+            return "Cita registrada exitosamente";
         }
 
     }
@@ -82,18 +82,24 @@ public class CitaController {
             return "La cita ingresada no existe";
 
         } else {
+            int index = -1;
             for (int i = 0; i < citas.size(); i++) {
                 if (Objects.equals(citas.get(i).getAcompanante().getNombre(), acompanante.getNombre())) {
-                    Cita nuevoCita = new Cita(acompanante, cliente, fecha, hora, lugar, horas);
-                    citas.remove(citas.get(i));
-                    citas.add(nuevoCita);
-                    this.listaCitaObservable.remove(citas.get(i));
-                    this.listaCitaObservable.add(nuevoCita);
-
+                    index = i;
                 }
 
             }
-            return "La cita ingresada fue actualizada";
+
+            if (index != -1) {
+                Cita nuevoCita = new Cita(acompanante, cliente, fecha, hora, lugar, horas);
+                citas.remove(index);
+                citas.add(nuevoCita);
+                this.listaCitaObservable.remove(index);
+                this.listaCitaObservable.add(nuevoCita);
+
+            }
+
+            return "La cita consultada fue actualizada";
         }
     }
 

@@ -53,7 +53,7 @@ public class AcompananteController {
             }
 
             if (index != -1) {
-                this.listaAcompananteObservable.remove(acompanantes.get(index));
+                this.listaAcompananteObservable.remove(index);
                 acompanantes.remove(acompanantes.get(index));
             }
 
@@ -83,17 +83,23 @@ public class AcompananteController {
             return "El acompañante ingresado no existe";
 
         } else {
+            int index = -1;
             for (int i = 0; i < acompanantes.size(); i++) {
                 if (Objects.equals(acompanantes.get(i).getNombre(), nombre)) {
-                    Acompanante nuevoAcompanante = new Acompanante(nombre, edad, talla, correo, telefono, saludo, valorHora);
-                    acompanantes.remove(acompanantes.get(i));
-                    acompanantes.add(nuevoAcompanante);
-                    this.listaAcompananteObservable.remove(acompanantes.get(i));
-                    this.listaAcompananteObservable.add(nuevoAcompanante);
+                    index = i;
 
                 }
 
             }
+
+            if (index != -1) {
+                Acompanante nuevoAcompanante = new Acompanante(nombre, edad, talla, correo, telefono, saludo, valorHora);
+                acompanantes.remove(index);
+                acompanantes.add(nuevoAcompanante);
+                this.listaAcompananteObservable.remove(index);
+                this.listaAcompananteObservable.add(nuevoAcompanante);
+            }
+
 
             return "El acompañante ingresado fue actualizado";
         }

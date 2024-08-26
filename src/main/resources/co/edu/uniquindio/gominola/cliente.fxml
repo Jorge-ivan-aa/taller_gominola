@@ -38,39 +38,39 @@
                               <RowConstraints maxHeight="51.0" minHeight="0.0" prefHeight="0.0" vgrow="SOMETIMES" />
                            </rowConstraints>
                            <children>
-                              <Label fx:id="lbNombre1" text="Nombre:" textFill="#050000" GridPane.halignment="CENTER" GridPane.valignment="BOTTOM">
+                              <Label text="Nombre:" textFill="#050000" GridPane.halignment="CENTER" GridPane.valignment="BOTTOM">
                                  <font>
                                     <Font name="Bell MT" size="14.0" />
                                  </font></Label>
-                              <TextField fx:id="txtNombreCliente1" prefHeight="26.0" prefWidth="210.0" style="-fx-background-color: #FCEFEF;" GridPane.rowIndex="1">
+                              <TextField fx:id="txtNombreCliente" prefHeight="26.0" prefWidth="210.0" style="-fx-background-color: #FCEFEF;" GridPane.rowIndex="1">
                                  <font>
                                     <Font name="Bell MT" size="14.0" />
                                  </font></TextField>
-                              <Label fx:id="lbTelefono1" prefHeight="20.0" prefWidth="72.0" text="Telefono:" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="BOTTOM">
+                              <Label prefHeight="20.0" prefWidth="72.0" text="Telefono:" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="BOTTOM">
                                  <font>
                                     <Font name="Bell MT" size="14.0" />
                                  </font></Label>
-                              <TextField fx:id="txtTelefonoCliente1" style="-fx-background-color: #FCEFEF;" GridPane.rowIndex="3">
+                              <TextField fx:id="txtTelefonoCliente" style="-fx-background-color: #FCEFEF;" GridPane.rowIndex="3">
                                  <font>
                                     <Font name="Bell MT" size="14.0" />
                                  </font></TextField>
-                              <Label fx:id="lbCorreo1" text="Correo:" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="BOTTOM">
+                              <Label text="Correo:" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="BOTTOM">
                                  <font>
                                     <Font name="Bell MT" size="14.0" />
                                  </font></Label>
-                              <TextField fx:id="txtCorreoCliente1" style="-fx-background-color: #FCEFEF;" GridPane.rowIndex="5">
+                              <TextField fx:id="txtCorreoCliente" style="-fx-background-color: #FCEFEF;" GridPane.rowIndex="5">
                                  <font>
                                     <Font name="Bell MT" size="14.0" />
                                  </font></TextField>
-                              <Button fx:id="btnAgregarCliente1" mnemonicParsing="false" onAction="#agregarAction" prefHeight="31.0" prefWidth="80.0" style="-fx-background-color: #484A47;" text="Agregar" textFill="WHITE" GridPane.halignment="LEFT" GridPane.rowIndex="8">
+                              <Button mnemonicParsing="false" onAction="#agregarClienteAction" prefHeight="31.0" prefWidth="80.0" style="-fx-background-color: #484A47;" text="Agregar" textFill="WHITE" GridPane.halignment="LEFT" GridPane.rowIndex="8">
                                  <font>
                                     <Font name="Bell MT" size="14.0" />
                                  </font></Button>
-                              <Button fx:id="btnEliminarCliente1" mnemonicParsing="false" onAction="#eliminarAction" prefHeight="31.0" prefWidth="77.0" style="-fx-background-color: #484A47;" text="Eliminar" textFill="WHITE" GridPane.halignment="RIGHT" GridPane.rowIndex="8">
+                              <Button mnemonicParsing="false" onAction="#eliminarClienteAction" prefHeight="31.0" prefWidth="77.0" style="-fx-background-color: #484A47;" text="Eliminar" textFill="WHITE" GridPane.halignment="RIGHT" GridPane.rowIndex="8">
                                  <font>
                                     <Font name="Bell MT" size="14.0" />
                                  </font></Button>
-                              <Button fx:id="btnAgregarCliente11" layoutX="10.0" layoutY="219.0" mnemonicParsing="false" onAction="#agregarAction" prefHeight="31.0" prefWidth="81.0" style="-fx-background-color: #484A47;" text="Actualizar" textFill="WHITE" GridPane.rowIndex="8">
+                              <Button layoutX="10.0" layoutY="219.0" mnemonicParsing="false" onAction="#actualizarClienteAction" prefHeight="31.0" prefWidth="81.0" style="-fx-background-color: #484A47;" text="Actualizar" textFill="WHITE" GridPane.rowIndex="8">
                                  <font>
                                     <Font name="Bell MT" size="14.0" />
                                  </font>

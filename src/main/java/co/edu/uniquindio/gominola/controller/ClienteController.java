@@ -1,6 +1,7 @@
 package co.edu.uniquindio.gominola.controller;
 
 import co.edu.uniquindio.gominola.factory.ModelFactory;
+import co.edu.uniquindio.gominola.model.Acompanante;
 import co.edu.uniquindio.gominola.model.Cliente;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -9,8 +10,8 @@ import java.util.ArrayList;
 import java.util.Objects;
 
 public class ClienteController {
-    private ModelFactory factory;
-    private ObservableList<Cliente> listaClienteObservable;
+    private final ModelFactory factory;
+    private final ObservableList<Cliente> listaClienteObservable;
 
     public ClienteController() {
         this.factory = ModelFactory.getIntance();
@@ -39,8 +40,8 @@ public class ClienteController {
                 }
             }
             if (index != -1) {
-                this.listaClienteObservable.remove(Clientes.get(index));
-                Clientes.remove(Clientes.get(index));
+                this.listaClienteObservable.remove(index);
+                Clientes.remove(index);
             }
             return "El cliente fue eliminado correctamente";
         }
@@ -76,15 +77,21 @@ public class ClienteController {
             return "El cliente ingresado no existe";
 
         } else {
+            int index = -1;
             for (int i = 0; i < Clientes.size(); i++) {
                 if (Objects.equals(Clientes.get(i).getNombre(), nombre)) {
-                    Cliente nuevoCliente = new Cliente(nombre, correo, telefono);
-                    Clientes.remove(Clientes.get(i));
-                    Clientes.add(nuevoCliente);
-                    this.listaClienteObservable.remove(Clientes.get(i));
-                    this.listaClienteObservable.add(nuevoCliente);
+                    index = i;
                 }
             }
+
+            if (index != -1) {
+                Cliente nuevoCliente = new Cliente(nombre, correo, telefono);
+                Clientes.remove(index);
+                Clientes.add(nuevoCliente);
+                this.listaClienteObservable.remove(index);
+                this.listaClienteObservable.add(nuevoCliente);
+            }
+
             return "El cliente fue actualizado correctamente";
 
         }
